@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.ecommerce.manage.main.Model.Product;
 
-@CrossOrigin("http://localhost:4201")
+@CrossOrigin("*")
 @RepositoryRestResource(collectionResourceRel = "product",path = "products")
 public interface ProductRepository extends JpaRepository<Product, Long> {
-    List<Product> findByid(@Param("id") Long id);
+    List<Product> findByCategoryId(@Param("id") Long id);
 
 }
