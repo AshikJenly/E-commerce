@@ -1,0 +1,21 @@
+
+<nav style="background-color: rgb(244, 246, 245); position: fixed; z-index: 1000; width: 100%; display: flex;">
+    <a class="navbar-brand">Navbar</a>
+
+    <form class="form-inline" style="margin-left: 5rem;">
+
+        <input #myInput type="text" 
+        placeholder="Search for products ..."
+        class="au-input au-input-xl form-control mr-sm-3" style="width: 20rem;"
+        (keyup.enter)="doSearch(myInput.value)"  />
+
+        <button (click)="doSearch(myInput.value)" class="au-btn-submit btn btn-outline-success my-2 my-sm-0">
+            Search
+        </button>
+        <div>
+        <a routerLink="/login" class="btn">Sign In</a>
+        </div>
+</form>
+
+    <!-- </div> -->
+</nav>

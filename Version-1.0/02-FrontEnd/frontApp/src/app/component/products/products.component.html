@@ -1,0 +1,58 @@
+
+
+<nav>
+    <app-search></app-search>
+    
+</nav>
+<div style="margin-left: 5rem; margin-right: 5rem;"> 
+    <div class="row "  >
+        <div class="col-1 ml-4 mr-1 " style= "margin-top: 4rem;" id="catid">
+              <app-product-category></app-product-category>
+        </div>
+        <div class="col-10" style="margin-top: 4rem;">
+          
+
+<div class="container ">
+    <div class="row">
+        <div class="col-lg-4 col-md-10 col-sm-12 mb-4" *ngFor="let product of products">
+            <div class="card">
+                <img class="card-img-top" src="/assets/image/wallpaper.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                <a routerLink="/singleprod/{{ product.sku }}" class="btn btn-primary" routerLinkActive="active-link">view</a>
+                    <!-- <a href="#" class="btn btn-primary">view</a> -->
+                </div>
+            </div>
+        </div>
+        <div *ngIf="products?.length == 0" class=" col-lg-4 col-md-10 col-sm-12 mb-4 " role="alert">
+            <div class="alert alert-warning">
+
+                No Products Found
+            </div>
+                <a href="javascript:history.back();history.back()">Go Back</a>
+
+        </div>
+
+
+        
+    </div>
+    <div>
+        <ngb-pagination 
+                    [(page)]="thePageNumber"
+                    [pageSize]="thePageSize"
+                    [collectionSize]="theTotalElements"
+                    [maxSize]="5"
+                    (pageChange)="listProducts()"
+        ></ngb-pagination>
+        <!-- <ngb-pagination></ngb-pagination> -->
+    </div>
+    
+</div>
+
+<router-outlet></router-outlet>
+</div>
+</div>
+
+
+</div>
