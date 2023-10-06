@@ -31,11 +31,14 @@ public class Customer {
     @Column(name="is_seller",columnDefinition = "boolean default false")
     private boolean is_seller;
 
-    // public void setSeller(boolean seller) {
-    //     this.isSeller = seller;
-    // }
-    // public boolean isSeller() {
-    //     return isSeller;
-    // }
+    public boolean isIs_seller() {
+        return is_seller;
+    }
+
+    public void setIs_seller(boolean is_seller) {
+        this.is_seller = is_seller;
+    }
+
+    
 
 }

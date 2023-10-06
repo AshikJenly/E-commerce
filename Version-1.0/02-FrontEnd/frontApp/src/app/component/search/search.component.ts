@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -7,13 +7,24 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
+
+  signInorOut:string = "Sign In"
+  signInorOutLink:string = "/login"
+
+
   constructor(private router: Router) { }
 
   ngOnInit() {
     
+    if(sessionStorage.getItem("isLogin") === "true")
+    {
+      this.signInorOut = "Sign Out"
+      this.signInorOutLink = "/login/logout?=''"
+    }
+  
   }
 
-  doSearch(value: string) {
+  doSearch(value: string) { 
     console.log(`value=${value}`);
     this.router.navigateByUrl(`/search/${value}`);
   }

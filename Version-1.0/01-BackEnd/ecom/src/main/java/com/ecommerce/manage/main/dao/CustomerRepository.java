@@ -11,8 +11,8 @@ import com.ecommerce.manage.main.Model.Customer;
 
 @CrossOrigin("*")
 @RepositoryRestResource(collectionResourceRel = "customer",path = "customers")
-public interface CustomerRepository extends JpaRepository<Customer,Long> {
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
     Customer findByEmail(@Param("email") String email);
     Customer findByEmailAndPassword(@Param("email") String email, @Param("password") String password);
-
+    
 }

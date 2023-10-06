@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {NgForm} from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { NgForm } from '@angular/forms';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,12 +9,33 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  url:String = 'http://localhost:4201/api/customers';
- 
-  constructor(private http: HttpClient) {}
-  OnSubmit(form :NgForm)
-  {
+  url: string = 'http://localhost:4201/api/customers/';
+  formData = {
+    "firstname": '',
+    "lastname": '',
+    "email": '',
+    "password": ''
+  };
+
+  constructor(private http: HttpClient, private router: Router) {}
+
+  OnSubmit(form: NgForm) {
+   
+
+    if (this.isValidReg(form))
+    {
+      console.log("submitted", this.formData);
+      sessionStorage.setItem("isRegisteredNow","true")
     
-    console.log("submitted",form.value.firstname)
+      this.router.navigate(["/login"])
+    }
+    else
+    {
+      this.router.navigate(["/register"])
+    }
+  }
+  isValidReg(form:NgForm):boolean
+  {
+    return true
   }
 }

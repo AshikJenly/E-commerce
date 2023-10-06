@@ -16,6 +16,7 @@ import { ViewproductComponent } from './component/viewproduct/viewproduct.compon
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './usercredentials/login/login.component';
 import { RegisterComponent } from './usercredentials/register/register.component';
+import { authGuard } from './usercredentials/auth.guard';
 
 const routes: Routes = [
   // Your other routes
@@ -25,8 +26,9 @@ const routes: Routes = [
   {path: 'category', component: ProductsComponent},
   {path: 'singleprod/:sku', component:ViewproductComponent },
   { path: 'allproducts', component: ProductsComponent },
-  {path:'viewcart',component:CartComponent},
+  {path:'viewcart',component:CartComponent,canActivate:[authGuard]},
   {path:'login',component:LoginComponent},
+  {path:'login/:logout',component:LoginComponent},
   {path:'register',component:RegisterComponent}
 
 

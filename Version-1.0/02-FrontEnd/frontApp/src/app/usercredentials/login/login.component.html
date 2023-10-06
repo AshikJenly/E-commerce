@@ -1,13 +1,14 @@
 <div class="container-fluid">
-    <form class="mx-auto">
+    <form class="mx-auto" #signInForm="ngForm" (ngSubmit)="OnSubmit(signInForm)">
       <h4 class="text-center">Sign In</h4>
+      <p>{{message}}</p>
       <div class="mb-3 mt-5">
-        <label for="exampleInputEmail1" class="form-label">User Name</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="formData.email" [ngModelOptions]="{standalone: true}">
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <label for="exampleInputPassword1" class="form-label" >Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="formData.password" [ngModelOptions]="{standalone: true}">
       </div>
       <div class="d-flex justify-content-between align-items-center mb-3">
         <div>
@@ -16,7 +17,7 @@
         </div>
         
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="rememberMe">
+          <input type="checkbox" class="form-check-input" id="rememberMe" [(ngModel)]="formData.password" [ngModelOptions]="{standalone: true}">
           <label class="form-check-label" for="rememberMe">Remember Me</label>
         </div>
       </div>
