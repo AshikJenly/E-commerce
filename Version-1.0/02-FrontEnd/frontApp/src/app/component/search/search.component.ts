@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {  Router } from '@angular/router';
+import { CredentialService } from 'src/app/service/credential.service';
 
 @Component({
   selector: 'app-search',
@@ -10,16 +11,17 @@ export class SearchComponent {
 
   signInorOut:string = "Sign In"
   signInorOutLink:string = "/login"
+  welcome = ""
 
-
-  constructor(private router: Router) { }
+  constructor(private router: Router,private credserv:CredentialService) { }
 
   ngOnInit() {
     
-    if(sessionStorage.getItem("isLogin") === "true")
+    if(this.credserv.getData("isLogin") == "true")
     {
       this.signInorOut = "Sign Out"
       this.signInorOutLink = "/login/logout?=''"
+      this.welcome = `Welcome ${this.credserv.getuserName()}!`
     }
   
   }

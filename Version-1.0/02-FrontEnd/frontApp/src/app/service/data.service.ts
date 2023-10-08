@@ -38,7 +38,6 @@ export class DataService {
 
     // need to build URL based on the keyword 
     const searchUrl = `${this.baseUrl}/search/findBysku?sku=${theKeyword}`;
-console.log(this.getProducts(searchUrl));
     return this.getProducts(searchUrl);
   }
 

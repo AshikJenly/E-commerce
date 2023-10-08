@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { CredentialService } from 'src/app/service/credential.service';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,7 @@ export class RegisterComponent {
     "password": ''
   };
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router,private credserv:CredentialService) {}
 
   OnSubmit(form: NgForm) {
    
@@ -25,7 +26,7 @@ export class RegisterComponent {
     if (this.isValidReg(form))
     {
       console.log("submitted", this.formData);
-      sessionStorage.setItem("isRegisteredNow","true")
+      this.credserv.setData("isRegisteredNow","true")
     
       this.router.navigate(["/login"])
     }
