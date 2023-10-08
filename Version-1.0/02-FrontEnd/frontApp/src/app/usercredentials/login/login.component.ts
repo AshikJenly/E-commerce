@@ -40,12 +40,12 @@ export class LoginComponent {
       this.rout.navigate(["/allproducts"])
     }
   }
-  OnSubmit(form: NgForm) {
+ async OnSubmit(form: NgForm) {
 
     const email = this.formData.email
     const password = this.formData.password
 
-    const isvalid = this.credserv.getUserByEmailAndPassword(email,password)
+    const isvalid = await this.credserv.getUserByEmailAndPassword(email,password)
     if(isvalid){
       this.credserv.setData("isLogin","true")
       this.rout.navigate(["/allproducts"])
@@ -55,6 +55,7 @@ export class LoginComponent {
       this.message = "email or password wrong"
     }
   }
+  
   LogOut()
   {
     this.credserv.setData("isLogin","false")

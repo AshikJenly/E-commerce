@@ -24,24 +24,22 @@ export class CredentialService {
   }
 
 
-  getUserByEmailAndPassword(email:string,password:string):any{
-
-    const url = `${this.baseUrl}?email=${email}&password=${password}`
-    const data = this.fetchCustomerData(url)
-
-    if(data){
-      data.subscribe((response)=>{
-        const firstName = response.firstname;
-        const lastName = response.lastname;
-        
-        localStorage.setItem("username",firstName + " " + lastName)
-      })
-      return true
-    }
-    else{
-      return false
-    }
+  getUserByEmailAndPassword(email: string, password: string): Promise<boolean> {
+    const url = `${this.baseUrl}?email=${email}&password=${password}`;
+  
+    return new Promise<boolean>((resolve, reject) => {
+      this.fetchCustomerData(url).subscribe(
+        (response) => {
+          resolve(true);
+        },
+        (error) => {
+       
+          resolve(false);
+        }
+      );
+    });
   }
+  
   getuserName():any{
     return localStorage.getItem("username")
   }

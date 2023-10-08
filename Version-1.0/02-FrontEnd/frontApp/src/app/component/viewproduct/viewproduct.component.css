@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    margin: 4rem auto;
+}
+.product-details {
+    display: flex;
+    justify-content: space-between;
+}
+.product-image {
+    display: flex;
+    width: 20rem;
+    height: 20rem;
+}
+.product-info {
+    flex: 2;
+    padding-left: 2rem;
+}
+.cart-buttons {
+    text-align: center;
+    margin-top: 2rem;
+    margin-right: 15rem;
+}
+.add-button {
+    background-color: #19bf1c;
+    font-size: larger;
+    color: #fff;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+}
+.remove-button {
+    background-color: #bd2912;
+    font-size: larger;
+    color: #fff;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+}

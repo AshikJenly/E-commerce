@@ -1,21 +1,22 @@
 <div class="container-fluid">
   <form class="mx-auto" #signupForm="ngForm" (ngSubmit)="OnSubmit(signupForm)">
     <h4 class="text-center">Sign Up</h4>
+    <p>{{errormessage}}</p>
     <div class="mb-3 mt-5">
       <label for="firstname" class="form-label">First Name</label>
-      <input type="text" class="form-control" id="firstname" name="firstname" [(ngModel)]="formData.firstname">
+      <input type="text" class="form-control" id="firstname" name="firstname" [(ngModel)]="formData.firstname" required>
     </div>
     <div class="mb-3">
       <label for="lastname" class="form-label">Last Name</label>
-      <input type="text" class="form-control" id="lastname" name="lastname" [(ngModel)]="formData.lastname">
+      <input type="text" class="form-control" id="lastname" name="lastname" [(ngModel)]="formData.lastname" required>
     </div>
     <div class="mb-3">
       <label for="email" class="form-label">Email</label>
-      <input type="email" class="form-control" id="email" name="email" [(ngModel)]="formData.email">
+      <input type="email" class="form-control" id="email" name="email" [(ngModel)]="formData.email" required>
     </div>
     <div class="mb-3">
       <label for="password" class="form-label">Password</label>
-      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="formData.password">
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="formData.password" required>
     </div>
     <div class="d-flex justify-content-between align-items-center mb-3">
       <div>
