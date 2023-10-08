@@ -11,7 +11,7 @@ export class DataService {
 
   private baseUrl = 'http://localhost:4201/api/products';
   private categoryUrl = 'http://localhost:4201/api/product-category';
-
+  private cartUrl = "http://localhost:4201/api/carts/search/getcarts"
 
   constructor(private httpClient: HttpClient) { }
 
@@ -50,6 +50,13 @@ export class DataService {
     return this.getProducts(searchUrl);
   }
 
+  getCartProducts(theKeyword: string): Observable<Product[]> {
+
+    // need to build URL based on the keyword 
+    const searchUrl = `${this.cartUrl}?cid=${theKeyword}`;
+    
+    return this.getProducts(searchUrl);
+  }
 
   private getProducts(searchUrl: string): Observable<Product[]> {
     return this.httpClient.get<GetResponseProducts>(searchUrl).pipe(map(response => response._embedded.product));

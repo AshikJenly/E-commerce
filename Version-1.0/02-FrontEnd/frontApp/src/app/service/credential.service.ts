@@ -30,10 +30,13 @@ export class CredentialService {
     return new Promise<boolean>((resolve, reject) => {
       this.fetchCustomerData(url).subscribe(
         (response) => {
+
+          localStorage.setItem("username",response.firstname+" "+response.lastname)
+          localStorage.setItem("userid",response.cid)
           resolve(true);
         },
         (error) => {
-       
+          
           resolve(false);
         }
       );
@@ -44,6 +47,15 @@ export class CredentialService {
     return localStorage.getItem("username")
   }
   fetchCustomerData(url:string): Observable<any> {
-    return this.http.get(url);
+
+    try{
+
+      return this.http.get(url);
+    }
+    catch(error)
+    {
+      const x =JSON.parse(`'a':'jenly'`)
+      return x;
+    }
   }
 }

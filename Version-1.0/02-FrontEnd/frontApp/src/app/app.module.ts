@@ -18,6 +18,8 @@ import { LoginComponent } from './usercredentials/login/login.component';
 import { RegisterComponent } from './usercredentials/register/register.component';
 import { AuthGuard } from './usercredentials/auth.guard';
 import { CredentialService } from './service/credential.service';
+import { AddtocartService } from './postingService/addtocart.service';
+import { RegisterService } from './postingService/register.service';
 
 const routes: Routes = [
   // Your other routes
@@ -54,7 +56,7 @@ const routes: Routes = [
     FormsModule
   ],
   exports:[RouterModule],
-  providers: [DataService,AuthGuard,CredentialService],
+  providers: [DataService,AuthGuard,CredentialService,AddtocartService,RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

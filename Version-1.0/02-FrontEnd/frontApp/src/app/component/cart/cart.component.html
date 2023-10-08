@@ -1,26 +1,29 @@
+
 <div class="container">
-    <h1>Your Shopping Cart</h1>
+    <h1>J - MART</h1>
+    <div *ngFor="let product of products">
     <div class="cart-item">
         <img class="product-image" src="https://placehold.co/180x180" alt="Product 1">
         <div class="product-details">
-            <p class="product-name">Product Name 1</p>
-            <p class="product-description">this product is recommended by ashik jenly </p>
-            <p class="product-price">200 Rs</p>
-            <button type="button" class="btn btn-warning">Remove</button> <!-- Add svg button later-->
+            <p class="product-name">{{product.name}}</p>
+            <p class="product-description">{{product.description}}</p>
+            <p class="product-price">{{product.unitPrice}}</p>
+            <button type="button" class="btn btn-warning"  (click)="onRemoveButtonClick()">Remove</button> <!-- Add svg button later-->
         </div>
     </div>
-    <div class="cart-item">
-        <img class="product-image" src="https://placehold.co/180x180" alt="Product 2">
-        <div class="product-details">
-            <p class="product-name">Product Name 2</p>
-            <p class="product-description">this a very good product </p>
-            <p class="product-price">200 Rs</p>
-            <button type="button" class="btn btn-warning">Remove</button> <!-- Add svg button later-->
-        </div>
     </div>
-    <div class="cart-total">
+    <div *ngIf="products?.length == 0" class=" col-lg-4 col-md-10 col-sm-12 mb-4 " role="alert">
+        <div class="alert alert-warning">
+
+            No Products Found
+        </div>
+            <a type="button" href="javascript:history.back();history.back()" class="btn btn-primary">Go Back</a>
+
+    </div>
+    <div class="cart-total" *ngIf="products?.length != 0">
         <p>Total: 400 Rs</p>
         <button type="button" class="btn btn-primary">Checkout</button>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script><router-outlet></router-outlet>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<router-outlet></router-outlet>
