@@ -58,6 +58,6 @@ export class ViewproductComponent implements OnInit {
       cid: localStorage.getItem("userid"),
       sku: this.products[0].sku
     };
-    this.addtocart.removeFromcart(item);
+    this.addtocart.removeFromcartone(item);
   }
 }

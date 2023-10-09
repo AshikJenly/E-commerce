@@ -61,4 +61,23 @@ export class CartComponent implements OnInit {
     this.addtocart.removeFromcart(item);
     window.location.reload();
   }
+
+  onRemoveOneButtonClick(i:number) {
+    console.log(localStorage.getItem("userid"), this.products[i].sku);
+    const item = {
+      cid: localStorage.getItem("userid"),
+      sku: this.products[i].sku
+    };
+    this.addtocart.removeFromcartone(item);
+    window.location.reload();
+  }
+  onAddOneButtonClick(i:number) {
+    console.log(localStorage.getItem("userid"), this.products[i].sku);
+    const item = {
+      cid: localStorage.getItem("userid"),
+      sku: this.products[i].sku
+    };
+    this.addtocart.addTocart(item);
+    window.location.reload();
+  }
 }

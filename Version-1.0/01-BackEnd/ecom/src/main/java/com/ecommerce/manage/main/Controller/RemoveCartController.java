@@ -24,7 +24,13 @@ public class RemoveCartController {
         inCartRepository.deleteByCidAndSku(cid, sku);
         // System.out.println(""+inCartRepository.getcartallforcontroller(cid).get(0));
     }
+  @PostMapping("/deleteFromCartItemwithlimit")
+    public void deleteCartItemlimit(@RequestParam Long cid, @RequestParam String sku) {
+        
 
+        inCartRepository.deleteByCidAndSkuWithLimit(cid, sku);
+
+    }
      @GetMapping("/cart/totalCost")
     public ResponseEntity<Double> getTotalCostForUser(@RequestParam Long cid) {
         Double totalCost = inCartRepository.getTotalCostForUser(cid);

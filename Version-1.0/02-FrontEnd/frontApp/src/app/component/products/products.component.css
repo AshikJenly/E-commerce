@@ -1,16 +1,4 @@
 
-@media (max-width: 1000px) {
-    .side-bar{
-        display: none;
-    }
-  }
-/* 
-.container-left{
-    display:block;
-}
-.container{
-    display: flex;
-} */
 .cnt{
     margin-top: 100px;
 }

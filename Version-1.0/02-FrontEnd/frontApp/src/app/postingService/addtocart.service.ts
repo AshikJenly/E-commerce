@@ -10,6 +10,7 @@ export class AddtocartService {
   cartApiUrl = "http://localhost:4201/api/carts"
   cartController = "http://localhost:4201/cartcontroller"
 
+
   constructor(private http:HttpClient) { }
 
   addTocart(item:any)
@@ -32,6 +33,17 @@ export class AddtocartService {
     };
     return this.http.post(this.cartApiUrl, data, httpOptions);
   }
+
+        // Cart details
+        getCountForSkuAndCid(sku: string, cid: number): Observable<number> {
+          return this.http.get<number>(`${this.cartController}/cart/productCount?cid=${cid}&sku=${sku}`);
+        }
+
+        getTotal( cid: number): Observable<number> {
+          return this.http.get<number>(`${this.cartController}/cart/totalCost?cid=${cid}`);
+        }
+
+
 
 
 
@@ -56,15 +68,29 @@ export class AddtocartService {
     };
     return this.http.post(url,data);
   }
+  
+  
 
 
+  deleteOnlyOneItem(data: any,url:string): Observable<any> {
 
-  // Cart details
-  getCountForSkuAndCid(sku: string, cid: number): Observable<number> {
-    return this.http.get<number>(`${this.cartController}/cart/productCount?cid=${cid}&sku=${sku}`);
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    };
+    return this.http.post(url,data);
   }
-
-  getTotal( cid: number): Observable<number> {
-    return this.http.get<number>(`${this.cartController}/cart/totalCost?cid=${cid}`);
+// remove one element from cart
+  removeFromcartone(item:any)
+  {
+      const url = `${this.cartController}/deleteFromCartItemwithlimit?cid=${item.cid}&sku=${item.sku}`
+      return this.deleteOneItem(item,url).subscribe( (response) => {
+        // Handle the response from the server (e.g., success message)
+       
+        console.log('Response:',response);
+      },
+      (error) => {
+        // Handle any errors that occur during the POST request
+        console.error('Error:', error);
+      })
   }
 }

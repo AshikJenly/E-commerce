@@ -1,26 +1,37 @@
-<div class="container">
-    <h1>J - MART</h1>
-    <div *ngFor="let product of products; let i = index">
-      <div class="cart-item">
-        <img class="product-image" src="https://placehold.co/180x180" alt="Product 1">
-        <div class="product-details">
-          <p class="product-name">{{product.name}}</p>
-          <p class="product-description">{{product.description}}</p>
-          <p class="product-price">{{product.unitPrice}}</p>
-          <p class="product-price">Count: {{counts[i]}}</p> <!-- Display product count -->
-          <button type="button" class="btn btn-warning" (click)="onRemoveButtonClick(i)">Remove</button>
+
+<body>
+    <div class="container">
+        <h1>J - MART</h1>
+        <div *ngFor="let product of products; let i = index">
+            <div class="cart-item">
+               
+                <img class="product-image" src="https://placehold.co/180x180" alt="Product 1">
+                <div class="product-details">
+                    <p class="product-name">{{product.name}}</p>
+                    <p class="product-description">{{product.description}}</p>
+                    <p class="product-price">{{product.unitPrice}}</p>
+                    <div class="product-count">
+                        <button type="button" class="btn btn-secondary" (click)="onRemoveOneButtonClick(i)">-</button>
+                        <span class="count-value">{{counts[i]}}</span>
+                        <button type="button" class="btn btn-secondary" (click)="onAddOneButtonClick(i)">+</button>
+                    </div>
+                </div>
+                <div class="remove-product">
+                    <button type="button" class="btn btn-danger" (click)="onRemoveButtonClick(i)">Remove</button>
+                </div>
+            </div>
         </div>
-      </div>
+        <div *ngIf="products?.length == 0" class="alert alert-warning" role="alert">
+            No Products Found
+            <a href="javascript:history.back()">Go Back</a>
+        </div>
+        <div class="cart-total card-last" *ngIf="products?.length != 0">
+            <a href="javascript:history.back()" type="button" class="btn btn-primary mr-4 go-back">Go Back</a>
+            <div>
+                <p>Total: {{total}} Rs</p>
+                <button type="button" class="btn btn-primary">Checkout</button>
+            </div>
+
+        </div>
     </div>
-    <div *ngIf="products?.length == 0" class="col-lg-4 col-md-10 col-sm-12 mb-4 " role="alert">
-      <div class="alert alert-warning">
-        No Products Found
-      </div>
-      <a type="button" href="javascript:history.back();history.back()" class="btn btn-primary">Go Back</a>
-    </div>
-    <div class="cart-total" *ngIf="products?.length != 0">
-      <p>Total: {{total}} Rs</p>
-      <button type="button" class="btn btn-primary">Checkout</button>
-    </div>
-  </div>
-  
+</body>
