@@ -26,7 +26,6 @@ export class ProductsComponent {
     this.route.paramMap.subscribe(() => {
       this.listProducts();
     });
-    this.myjavascript()
   }
   listProducts()
   {

@@ -56,4 +56,15 @@ export class AddtocartService {
     };
     return this.http.post(url,data);
   }
+
+
+
+  // Cart details
+  getCountForSkuAndCid(sku: string, cid: number): Observable<number> {
+    return this.http.get<number>(`${this.cartController}/cart/productCount?cid=${cid}&sku=${sku}`);
+  }
+
+  getTotal( cid: number): Observable<number> {
+    return this.http.get<number>(`${this.cartController}/cart/totalCost?cid=${cid}`);
+  }
 }

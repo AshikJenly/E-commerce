@@ -28,9 +28,17 @@ public interface InCartRepository extends JpaRepository<InCart,Long> {
     @Query("SELECT p FROM Product p JOIN InCart ic ON p.sku = ic.sku WHERE ic.cid = :cid")
     List<Product> getcartall(@Param("cid") Long cid);
 
+        @Query("SELECT p FROM Product p WHERE p.sku IN (SELECT ic.sku FROM InCart ic WHERE ic.cid = :cid)")
+    List<Product> getcartallforcontroller(Long cid);
     @Transactional
     void deleteByCidAndSku(Long cid, String sku);
     
-   
+    @Query("SELECT SUM(p.unitPrice * ic.count) FROM Product p JOIN InCart ic ON p.sku = ic.sku WHERE ic.cid = :cid")
+    Double getTotalCostForUser(@Param("cid") Long cid);
+    
+    @Query("SELECT COUNT(ic) FROM InCart ic WHERE ic.sku = :sku AND ic.cid = :cid")
+    Integer getProductCountForUser(@Param("cid") Long cid, @Param("sku") String sku);
+
+
 
 }
