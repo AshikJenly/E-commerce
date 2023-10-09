@@ -1,23 +1,19 @@
-
-<nav style="background-color: rgb(244, 246, 245); position: fixed; z-index: 1000; width: 100%; display: flex;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <a class="navbar-brand">Navbar</a>
-
-    <form class="form-inline" style="margin-left: 5rem;">
-
-        <input #myInput type="text" 
-        placeholder="Search for products ..."
-        class="au-input au-input-xl form-control mr-sm-3" style="width: 20rem;"
-        (keyup.enter)="doSearch(myInput.value)"  />
-
+    <form class="form-inline ml-auto">
+        <input #myInput type="text"
+               placeholder="Search for products ..."
+               class="au-input au-input-xl form-control mr-sm-3" style="width: 20rem;"
+               (keyup.enter)="doSearch(myInput.value)" />
         <button (click)="doSearch(myInput.value)" class="au-btn-submit btn btn-outline-success my-2 my-sm-0">
             Search
         </button>
-        <div class="forflex">
-        <a routerLink="{{signInorOutLink}}" class="btn">{{signInorOut}}</a>
+    </form>
+    <p class="ml-auto">{{ welcome }}</p>
+    <div class="ml-auto">
+        <a routerLink="{{ signInorOutLink }}" class="btn">{{ signInorOut }}</a>
         <a routerLink="/viewcart" class="btn">View Carts</a>
-        <p>{{welcome}}</p>
-        </div>
-</form>
-
-    <!-- </div> -->
+    </div>
 </nav>
+
+<!-- Add your content below the navigation bar -->

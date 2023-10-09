@@ -26,6 +26,7 @@ export class ProductsComponent {
     this.route.paramMap.subscribe(() => {
       this.listProducts();
     });
+    this.myjavascript()
   }
   listProducts()
   {
@@ -92,6 +93,32 @@ export class ProductsComponent {
       this.thePageSize = data.page.size;
       this.theTotalElements = data.page.totalElements;
     };
+  }
+
+
+
+
+
+  myjavascript()
+  {
+    const element:any = document.getElementById("closeButton")
+
+    window.addEventListener('resize', function () {
+      const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    
+      if (windowWidth <= 1000) {
+      element.style.backgroundColor="blue"
+       
+        console.log('Small screen detected');
+      } else {
+       
+        console.log('Large screen detected');
+      }
+    });
+    
+    // Initial check when the page loads
+    window.dispatchEvent(new Event('resize'));
   }
 
   }

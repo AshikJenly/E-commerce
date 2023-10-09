@@ -1,3 +1,27 @@
-.forflex{
-    display: flex;
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 4rem;
+}
+
+/* Adjust the spacing between elements in the navigation bar */
+.navbar-brand {
+margin-right: 1rem;
+}
+
+/* Center align the search input and button */
+.form-inline {
+display: flex;
+align-items: center;
+}
+
+/* Move the sign-in/sign-out and welcome elements to the right */
+.ml-auto {
+margin-left: auto;
+}
+
+/* Optional: Add some padding to the navbar */
+.navbar {
+padding: 10px;
 }

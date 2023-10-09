@@ -1,37 +1,11 @@
+<div class="position-fixed bg-light p-3" style="width: 12rem; margin-left: 5rem; margin-top: 1rem; height:100vh" id="categorynavid">
+    <button id="closeButton" class="btn btn-primary btn-sm mb-3">Close</button>
 
-<style>
-    /* Add custom styles to the sidebar */
-.position-fixed {
-    top: 0;
-    left: 0;
-    padding: 20px;
-    border-right: 1px solid #ddd;
-}
-
-.navbar-list li {
-    padding: 10px 0;
-}
-
-.navbar-list a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.active-link {
-    color: #007bff; 
-}
-
- </style>
-
-     <div class="position-fixed " style="width: 12rem;  overflow-y: auto; margin-left: 5rem; margin-top: 4rem;" id="categorynavid">
-        <ul class="list-unstyled navbar-list">
-            <li *ngFor="let tempProductCategory of productCategories">
-                <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
-                    {{ tempProductCategory.name }}
-                </a>
-            </li>
-        </ul>
-        
-    </div>
-    
+    <ul class="list-unstyled navbar-list">
+        <li *ngFor="let tempProductCategory of productCategories">
+            <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link" class="nav-link py-2">
+                {{ tempProductCategory.name }}
+            </a>
+        </li>
+    </ul>
+</div>
