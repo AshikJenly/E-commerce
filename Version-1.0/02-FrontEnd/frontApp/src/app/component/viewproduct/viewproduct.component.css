@@ -38,3 +38,8 @@ body {
     width: 2.25rem;
     height: 2.25rem;
 }
+.app-search{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    z-index: 100;
+}

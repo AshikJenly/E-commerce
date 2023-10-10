@@ -24,15 +24,15 @@ export class CartComponent implements OnInit {
     this.total = total;
   }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.cid = localStorage.getItem("userid");
 
     // Fetch total from the service
-    this.addtocart.getTotal(this.cid).subscribe(response => {
+   await this.addtocart.getTotal(this.cid).subscribe(response => {
       this.setTotal(response);
     });
     // Fetch cart products
-    this.dataservice.getCartProducts(this.cid).subscribe(data => {
+    await this.dataservice.getCartProducts(this.cid).subscribe(data => {
       console.log(data);
       this.products = data;
       
@@ -46,38 +46,39 @@ export class CartComponent implements OnInit {
     });
 
   }
-  getcountofproduct(sku: string, index: number) {
-    this.addtocart.getCountForSkuAndCid(sku, this.cid).subscribe(countResponse => {
+  async getcountofproduct(sku: string, index: number) {
+     this.addtocart.getCountForSkuAndCid(sku, this.cid).subscribe(countResponse => {
       this.counts[index] = countResponse;
     });
   }
 
-  onRemoveButtonClick(i:number) {
+  async onRemoveButtonClick(i:number) {
     console.log(localStorage.getItem("userid"), this.products[i].sku);
     const item = {
       cid: localStorage.getItem("userid"),
       sku: this.products[i].sku
     };
-    this.addtocart.removeFromcart(item);
-    window.location.reload();
+    await this.addtocart.removeFromcart(item);
+     window.location.reload();
   }
 
-  onRemoveOneButtonClick(i:number) {
+ async onRemoveOneButtonClick(i:number) {
     console.log(localStorage.getItem("userid"), this.products[i].sku);
     const item = {
       cid: localStorage.getItem("userid"),
       sku: this.products[i].sku
     };
-    this.addtocart.removeFromcartone(item);
-    window.location.reload();
+    await this.addtocart.removeFromcartone(item);
+     window.location.reload();
   }
-  onAddOneButtonClick(i:number) {
+  async onAddOneButtonClick(i:number) {
     console.log(localStorage.getItem("userid"), this.products[i].sku);
     const item = {
       cid: localStorage.getItem("userid"),
-      sku: this.products[i].sku
+      sku: this.products[i].sku,
+      count:1
     };
-    this.addtocart.addTocart(item);
-    window.location.reload();
+    await this.addtocart.addTocart(item);
+     window.location.reload();
   }
 }
