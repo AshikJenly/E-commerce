@@ -1,10 +1,30 @@
 /* Default styles */
 .main-card {
     width: 20rem;
+    justify-content: space-between;
   }
-  
+.container-custom{
+  width: 100%;
+  overflow-x: hidden;
+}
+
   /* Styles for screens up to 500px wide */
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
+
+    /* Side Bar  */
+
+    .side-bar{
+
+      position: fixed;
+      /* left: -100%; */
+
+      background-color:blueviolet;
+      height: 100vh;
+      width: 15rem;
+    }
+    /* Side bar ends */
+
+
     .card-collection {
       display: block;
     }
@@ -31,92 +51,155 @@
   }
   
   /* Styles for screens between 501px and 800px wide */
-  @media screen and (min-width: 501px) and (max-width: 700px) {
-    .container-custom {
-      margin-top: 5rem;
-    }
-    .card-collection {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 10px;
-      margin-left: 15%;
-      overflow-x: visible;
-      width: 80%;
-    }
-    .name-cont {
-      width: 15rem;
-      height: 3.9rem;
-      overflow-x: visible;
-      overflow-y: hidden;
-    }
-    .main-card-1 {
-      margin-top: 0.7rem;
-      width: 2rem;
-    }
-    /* Additional styles specific to this breakpoint */
-  }
-  
+  @media screen and (min-width: 601px) and (max-width: 899px) {
+    /* ---------- main ----------- */
+    .overall-container{
+     margin-top: 5rem;
+     display: grid;
+     grid-template-columns: 1fr 8fr;
+   
+   }
+ 
+   .side-bar{
+ 
+   }
+ 
+   .container-custom {
+   }
+   /* ---------- main ends-------------- */
+   .card-collection {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-gap: 5px;
+     margin-left: 2%;
+     overflow-x: visible;
+     width: 90%;
+   }
+   .name-cont {
+     width: 15rem;
+     height: 3.9rem;
+     overflow-x: visible;
+     overflow-y: hidden;
+   }
+   .main-card-1 {
+     margin-top: 0.7rem;
+     width: 15rem;
+   }
+   .image-card{
+       padding-left: 1rem;
+       padding-right: 1rem;
+   }
+     
+     /* Additional styles specific to this breakpoint */
+   }
+ 
   /* Styles for screens between 801px and 1106px wide */
-  @media screen and (min-width: 701px) and (max-width: 900px) {
-    .container-custom {
-      margin-top: 5rem;
-    }
-    .card-collection {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 10px;
-      margin-left: 15%;
-      overflow-x: visible;
-      width: 80%;
-    }
-    .name-cont {
-      width: 15rem;
-      height: 3.9rem;
-      overflow-x: visible;
-      overflow-y: hidden;
-    }
-    .main-card-1 {
-      margin-top: 0.7rem;
-      width: 2rem;
-    }
+  @media screen and (min-width: 900px) and (max-width: 1300px) {
+   /* ---------- main ----------- */
+   .overall-container{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+  
+  }
+
+  .side-bar{
+
+  }
+
+  .container-custom {
+  }
+  /* ---------- main ends-------------- */
+  .card-collection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    margin-left: 2%;
+    overflow-x: visible;
+    width: 90%;
+  }
+  .name-cont {
+    width: 15rem;
+    height: 3.9rem;
+    overflow-x: visible;
+    overflow-y: hidden;
+  }
+  .main-card-1 {
+    margin-top: 0.7rem;
+    width: 15rem;
+  }
+  .image-card{
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+    
     /* Additional styles specific to this breakpoint */
   }
-  
+
   /* Styles for screens 1107px and wider */
-  @media screen and (min-width: 901px) and (max-width:1200px) {
-    .container-custom {
+  @media screen and (min-width: 1301px) and (max-width:1600px) {
+    /* ---------- main ----------- */
+    .overall-container{
       margin-top: 5rem;
-    }
-    .card-collection {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 10px;
-      margin-left: 15%;
-      overflow-x: visible;
-      width: 80%;
+      grid-template-columns: 1fr 8fr;
+    
     }
-    .name-cont {
-      width: 15rem;
-      height: 3.9rem;
-      overflow-x: visible;
-      overflow-y: hidden;
+
+    .side-bar{
+
     }
-    .main-card-1 {
-      margin-top: 0.7rem;
-      width: 2rem;
-    }
-    /* Additional styles specific to this breakpoint */
-  }
-  
-  @media screen and (min-width:1201px) and (max-width: 1500px) {
+
     .container-custom {
-      margin-top: 5rem;
     }
+    /* ---------- main ends-------------- */
     .card-collection {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-gap: 10px;
-      margin-left: 15%;
+      margin-left: 5%;
+      overflow-x: visible;
+      width: 90%;
+    }
+    .name-cont {
+      width: 15rem;
+      height: 3.9rem;
+      overflow-x: visible;
+      overflow-y: hidden;
+    }
+    .main-card-1 {
+      margin-top: 0.7rem;
+      width: 15rem;
+    }
+    .image-card{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    /* Additional styles specific to this breakpoint */
+  }
+  
+  @media screen and (min-width:1601px) and (max-width: 1800px) {
+    /* ---------- main ----------- */
+    .overall-container{
+      margin-top: 5rem;
+      display: grid;
+      grid-template-columns: 1fr 8fr;
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+
+    .side-bar{
+
+    }
+
+    .container-custom {
+    }
+    /* ---------- main ends-------------- */
+    .card-collection {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-gap: 10px;
+      margin-left: 6%;
       overflow-x: visible;
       width: 80%;
     }
@@ -128,21 +211,36 @@
     }
     .main-card-1 {
       margin-top: 0.7rem;
-      width: 2rem;
+      width: 15rem;
     }
+    
     /* Additional styles specific to this breakpoint */
   }
   
 
-  @media screen and (min-width: 1500px) {
-    .container-custom {
+  @media screen and (min-width: 1801px) {
+
+    /* ---------- main ----------- */
+    .overall-container{
       margin-top: 5rem;
+      display: grid;
+      grid-template-columns: 1fr 8fr;
+      margin-left: 3rem;
+      margin-right: 3rem;
     }
+
+    .side-bar{
+
+    }
+
+    .container-custom {
+    }
+    /* ---------- main ends-------------- */
     .card-collection {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-gap: 10px;
-      margin-left: 15%;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-gap: 13rem;
+      margin-left: 5%;
       overflow-x: visible;
       width: 80%;
     }

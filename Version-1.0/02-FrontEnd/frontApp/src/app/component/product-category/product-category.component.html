@@ -1,11 +1,13 @@
-<div class="position-fixed bg-light p-3 side-bar .cnt" style="width: 12rem; margin-left: 5rem; margin-top: 1rem; height:100vh" id="categorynavid">
+<div class="pc-overall-container" id="categorynavid">
     <button id="closeButton" class="btn btn-primary btn-sm mb-3">Close</button>
-
     <ul class="list-unstyled navbar-list">
         <li *ngFor="let tempProductCategory of productCategories">
-            <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link" class="nav-link py-2">
-                {{ tempProductCategory.name }}
-            </a>
+               <div class="pc-link-p" routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link" >
+                   <a class="pc-link">
+                       {{ tempProductCategory.name }}
+                    </a>
+                
+               </div>
         </li>
     </ul>
 </div>
