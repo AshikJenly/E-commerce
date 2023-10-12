@@ -2,14 +2,23 @@
     <app-search></app-search>
 
 </nav>
-<!-- Menu Button -->
-<div class="menu-button">
-    <div (click)="menubarButton()">
-    <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg" class="cont-1-fc">
-        <image id="p-menu-icon" xlink:href='https://www.svgrepo.com/show/532195/menu.svg' width="44" height="44"/>
-    </svg>
+<!-- Buttons -->
+    <!-- Menu Button -->
+    <div class="menu-button">
+        <div (click)="menubarButton()">
+        <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg" class="cont-1-fc">
+            <image id="p-menu-icon" xlink:href='https://www.svgrepo.com/show/532195/menu.svg' width="44" height="44"/>
+        </svg>
+        </div>
     </div>
-</div>
+    <!-- Cart Button -->
+    <div class="cart-button">
+        <div routerLink="/viewcart">
+        <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg" class="cont-1-fc">
+            <image id="p-menu-icon" xlink:href='https://www.svgrepo.com/show/491926/shopping-color-cart-modern.svg' width="44" height="44"/>
+        </svg>
+        </div>
+    </div>
 <!-- ------------------- -->
 <!-- Overall Container -->
 <div class="overall-container">

@@ -24,4 +24,40 @@ margin-left: auto;
 /* Optional: Add some padding to the navbar */
 .navbar {
 padding: 10px;
+} 
+
+
+
+
+@media screen and (max-width: 500px) {
+
+  /* body */
+
+  .s-nav-body{
+    width: 5rem;
+    overflow: visible;
+
+  }
+
+  /* components */
+  .s-input{
+    width: 7rem;
+  }
+  .s-button{
+    width: 3rem;
+  }
+  .s-right-div{
+    display: none;
+  }
+  .s-welcome{
+    display: none;
+  }
+  .s-form{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+  .s-navbar-brand{
+    display: none;
+  }
+
 }
