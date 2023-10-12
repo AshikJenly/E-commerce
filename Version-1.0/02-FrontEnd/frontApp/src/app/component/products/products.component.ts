@@ -10,6 +10,8 @@ import { DataService } from 'src/app/service/data.service';
 })
 export class ProductsComponent {
   
+  isShowing = true;
+
   products: Product[] = []; // Declare a property to store the fetched data
   currentCategoryId:number = 1;
   searchMode: boolean = false;
@@ -26,6 +28,8 @@ export class ProductsComponent {
     this.route.paramMap.subscribe(() => {
       this.listProducts();
     });
+
+    this.menubarButton();
   }
   listProducts()
   {
@@ -94,30 +98,34 @@ export class ProductsComponent {
     };
   }
 
-
-
-
-
-  myjavascript()
+  
+  menubarButton()
   {
-    const element:any = document.getElementById("closeButton")
+    console.log("hai")
 
-    window.addEventListener('resize', function () {
-      const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    const myElement = document.getElementById('p-side-bar-elem');
+    const menuIcon = document.getElementById('p-menu-icon');
     
-      if (windowWidth <= 1000) {
-      element.style.backgroundColor="blue"
-       
-        console.log('Small screen detected');
-      } else {
-       
-        console.log('Large screen detected');
+
+    if (myElement) {
+
+      if(this.isShowing)
+      {
+          this.isShowing= false;
+          myElement.style.left = "-100%"
+          menuIcon?.setAttribute('xlink:href', 'https://www.svgrepo.com/show/532195/menu.svg')
+
+          
       }
-    });
-    
-    // Initial check when the page loads
-    window.dispatchEvent(new Event('resize'));
+      else{
+          myElement.style.left = "1%"
+          menuIcon?.setAttribute('xlink:href', 'https://www.svgrepo.com/show/521564/close.svg')
+          this.isShowing = true;
+      }
+    //   myElement.style.backgroundColor = 'blue';
+    //   myElement.style.color = 'white';
+      console.log(myElement)
+  }
   }
 
   }

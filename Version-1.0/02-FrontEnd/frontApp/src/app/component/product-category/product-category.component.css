@@ -32,7 +32,6 @@
 /* Globall */
   @media screen and (max-width: 500px) {
     .pc-overall-container{
-        background-color: aquamarine;
         /* left: -100%; */
         /* position: fixed; */
     }
