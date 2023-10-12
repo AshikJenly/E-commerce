@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
 }
 .container {
-    margin: 4rem auto;
+    margin: 0px;
 }
 .product-details {
     display: flex;
@@ -22,24 +22,66 @@ body {
     margin-top: 2rem;
     margin-right: 15rem;
 }
-.add-button {
-    background-color: #19bf1c;
-    font-size: larger;
-    color: #fff;
-    border-radius: 50%;
-    width: 2.25rem;
-    height: 2.25rem;
-}
+.add-button,
 .remove-button {
-    background-color: #bd2912;
-    font-size: larger;
-    color: #fff;
-    border-radius: 50%;
-    width: 2.25rem;
-    height: 2.25rem;
+  background: none;
+  border: none;
 }
+
+.add-button i,
+.remove-button i {
+  background: none;
+}
+.cart-buttons {
+    display: flex;
+    align-items: center;
+    
+  }
+
+.cart-buttons button {
+    font-size: xx-large;
+}
+  
+
 .app-search{
     margin-left: 1rem;
     margin-right: 1rem;
     z-index: 100;
+}
+@media screen and (min-width: 1000px) {
+    .custom-container {
+        margin-left: 5rem;
+    }
+    .cart-buttons {
+        margin-left: 22rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .custom-container {
+        margin-top: 5rem; 
+    }
+    .product-image {
+        margin-left: 0px;
+        margin-bottom: 1.25rem;
+        padding-left: 12px;
+        max-width: 90%;
+        height: auto;
+    }
+    .product-info {
+        padding-left: 12px;
+    }
+    .cart-buttons {
+        margin-left: 8rem;
+        margin-top: 0px;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center; /* Center the cart buttons horizontally */
+    }
+    .cart-buttons button {
+        font-size: 42px ;
+    }
 }

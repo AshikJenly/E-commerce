@@ -1,37 +1,44 @@
 <nav class="app-search">
   <app-search></app-search>
-  
 </nav>
-<div style="margin-left: 5rem; margin-right: 5rem;"> 
-  <div class="row "  >
-      <div class="col-1 ml-4 mr-1 " style= "margin-top: 4rem;" id="catid">
-            <app-product-category></app-product-category>
-      </div>
-      <div class="col-10" style="margin-top: 4rem;">
+
+<div class="custom-container" >
+  <div class="row">
+    <!-- <div class="col-12 col-md-1 ml-4 mr-1" style="margin-top: 4rem;" id="catid">
+      <app-product-category></app-product-category>
+    </div> -->
+    <div class="col-12 col-md-10" style="margin-top: 4rem;">
+      <div class="container">
+        <div class="product-details">
+          <div class="row">
+            <div class="col-12 col-md-6 product-image">
+              <img src="https://placehold.co/400x400" alt="Product Image" class="img-fluid">
+            </div>
+            <div class="col-12 col-md-6 card-body product-info">
+              <h2 class="card-title">{{ products[0].name }}</h2>
+              <p class="card-text"><strong>SKU:</strong> {{ products[0].sku }}</p>
+              <p class="card-text"><strong>Description:</strong> {{ products[0].description }}</p>
+              <p class="card-text"><strong>Price:</strong> {{ products[0].unitPrice | currency }}</p>
+              <p class="card-text"><strong>Active:</strong> {{ products[0].active ? 'Yes' : 'No' }}</p>
+              <p class="card-text"><strong>Units in Stock:</strong> {{ products[0].unitsInStock }}</p>
+              <p class="card-text"><strong>Date Created:</strong> {{ products[0].dateCreated | date }}</p>
+              <p class="card-text"><strong>Last Updated:</strong> {{ products[0].lastUpdated | date }}</p>
+              <a href="javascript:history.back()">Go Back</a>
+            </div>
+          </div>
+        </div>
+        <div class="cart-buttons">
+          <button class="add-button" (click)="onAddButtonClick()">
+            <i class="fa fa-plus-circle" style="font-size: xx-large;" aria-hidden="true">+</i>
+          </button>
+          <span>{{count}}</span>
+          <button class="remove-button" (click)="onRemoveButtonClick()">
+            <i class="fa fa-minus-circle" style="font-size: xx-large;" aria-hidden="true">-</i>
+          </button>
+        </div>
         
-        <div class="container">
-          <div class="product-details">
-              <div class="product-image">
-                  <img src="/assets/image/wallpaper.jpg" alt="Product Image">
-              </div>
-              <div class="card-body product-info">
-                  <h2 class="card-title">{{ products[0].name }}</h2>
-                  <p class="card-text"><strong>SKU:</strong> {{ products[0].sku }}</p>
-                  <p class="card-text"><strong>Description:</strong> {{ products[0].description }}</p>
-                  <p class="card-text"><strong>Price:</strong> {{ products[0].unitPrice | currency }}</p>
-                  <p class="card-text"><strong>Active:</strong> {{ products[0].active ? 'Yes' : 'No' }}</p>
-                  <p class="card-text"><strong>Units in Stock:</strong> {{ products[0].unitsInStock }}</p>
-                  <p class="card-text"><strong>Date Created:</strong> {{ products[0].dateCreated | date }}</p>
-                  <p class="card-text"><strong>Last Updated:</strong> {{ products[0].lastUpdated | date }}</p>
-                  <a href="javascript:history.back()">Go Back</a>
-                      </div>
-          </div>
-          <div class="cart-buttons">
-              <button class="add-button" (click)="onAddButtonClick()">+</button>
-              <span>{{count}}</span>
-              <button class="remove-button" (click)="onRemoveButtonClick()">-</button>
-          </div>
-          <!-- Recommended Product Section -->
-              <!-- to place similar products on the right side  -->
       </div>
+    </div>
+  </div>
   <router-outlet></router-outlet>
+</div>

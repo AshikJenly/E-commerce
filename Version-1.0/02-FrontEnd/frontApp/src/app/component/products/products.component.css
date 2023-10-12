@@ -1,4 +1,143 @@
 
 .cnt{
-    margin-top: 100px;
+    margin-top: 15rem;
 }
+@media screen and (max-width:767px) {
+   .card-collection{
+    display: block;
+   }
+    .main-card{
+        display: flex;
+    } 
+    .name-cont{
+        overflow: hidden;
+    }
+    .image-card{
+        width: 20rem;
+        height: 18rem;
+        margin: 0px;
+        margin-left: 0px;
+        border-left: 0px;
+        display: block;
+        overflow: hidden;
+    }
+    
+   .p-image{
+    width: 21rem;
+        height: auto;
+        margin: auto;
+        border-left: 0px;
+   }
+    .main-card child-card
+    {
+        margin-left: 0px;
+    }
+
+}
+
+@media screen and (min-width:800px) {
+    .card-collection{
+
+        background-color: rgb(149, 226, 229);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-rows: 25rem; */
+        grid-gap:10px;
+        margin-left: 15%;
+        overflow-x: visible;
+        width: 80%;
+
+    }
+    .name-cont{
+        width:15rem ;
+        height: 3.9rem;
+        overflow-x:visible;
+        overflow-y: hidden;
+    }
+    .image-card{
+        width: 20rem;
+        height: 18rem;
+        margin: 0px;
+        margin-left: 0px;
+        border-left: 0px;
+        display: block;
+        overflow: hidden;
+    }
+    
+   .p-image{
+    width: 21rem;
+        height: auto;
+        margin: auto;
+        border-left: 0px;
+   }
+   .main-card-1
+   {
+        margin-top: 0.7rem;
+       width: 2rem;
+   }
+
+    .main-card
+    {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        /* width: 21rem; */
+    }
+
+}
+
+
+@media screen and (min-width:1000px) {
+    .card-collection{
+
+        background-color: rgb(166, 149, 229);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        /* grid-template-rows: 25rem; */
+        grid-gap:10px;
+        margin-left: 15%;
+        overflow-x: visible;
+        width: 80%;
+
+    }
+    .name-cont{
+        width:15rem ;
+        height: 3.9rem;
+        overflow-x:visible;
+        overflow-y: hidden;
+    }
+    .image-card{
+        width: 20rem;
+        height: 18rem;
+        margin: 0px;
+        margin-left: 0px;
+        border-left: 0px;
+        display: block;
+        overflow: hidden;
+    }
+    
+   .p-image{
+    width: 21rem;
+        height: auto;
+        margin: auto;
+        border-left: 0px;
+   }
+   .main-card-1
+   {
+        margin-top: 0.7rem;
+       width: 2rem;
+   }
+
+    .main-card
+    {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        /* width: 21rem; */
+    }
+
+}
+
+
+.main-card{
+    width: 20rem;
+}
+
