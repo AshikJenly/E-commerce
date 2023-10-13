@@ -20,11 +20,11 @@
 <!-- Overall Container -->
 
 <div class="overall-container">
-    <div id="p-side-bar-elem" class="side-bar">
-        <app-product-category ></app-product-category>
+<div id="p-side-bar-elem" class="side-bar">
+    <app-product-category ></app-product-category>
 </div>
 
-<div class="container-custom cnt">
+<div class="container-custom cnt" >
     <div class="card-collection">
      <div  *ngFor="let product of products">
         <div routerLink="/singleprod/{{ product.sku }}"

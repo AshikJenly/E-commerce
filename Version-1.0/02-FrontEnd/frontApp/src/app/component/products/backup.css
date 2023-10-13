@@ -11,7 +11,7 @@
   display: none;
 }
 .side-bar{
-  background-color: rgb(244, 247, 249);
+  background-color: rgb(186, 218, 239);
   height: 100vh;
    
  
@@ -44,6 +44,10 @@
   /* Styles for screens up to 500px wide */
   @media screen and (max-width: 600px) {
 
+    /* Side Bar  */
+    /* .p-nav{
+      display: none;
+    } */
     .side-bar{
 
       position: fixed;
@@ -155,7 +159,7 @@
     .overall-container{
      margin-top: 5rem;
      display: grid;
-     grid-template-columns: 3fr 8fr;
+     grid-template-columns: 1fr 8fr;
    
    }
  
@@ -198,7 +202,7 @@
    .overall-container{
     margin-top: 5rem;
     display: grid;
-    grid-template-columns: 1.8fr 8fr;
+    grid-template-columns: 1fr 8fr;
   
   }
 
@@ -241,7 +245,7 @@
     .overall-container{
       margin-top: 5rem;
       display: grid;
-      grid-template-columns: 1.5fr 8fr;
+      grid-template-columns: 1fr 8fr;
     
     }
 
@@ -282,7 +286,7 @@
     .overall-container{
       margin-top: 5rem;
       display: grid;
-      grid-template-columns: 1.5fr 8fr;
+      grid-template-columns: 1fr 8fr;
       margin-left: 3rem;
       margin-right: 3rem;
     }
@@ -322,8 +326,10 @@
     /* ---------- main ----------- */
     .overall-container{
       margin-top: 5rem;
-      display: grid;
-      grid-template-columns: 1.5fr 8fr;
+      /* display: grid; */
+      /* grid-template-columns: 1fr 8fr; */
+
+      display: flex;
       margin-left: 3rem;
       margin-right: 3rem;
     }
