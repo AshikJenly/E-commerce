@@ -13,9 +13,32 @@
 .side-bar{
   background-color: rgb(236, 245, 251);
   height: 100vh;
-
+ 
 }
-
+.p-replacement{
+     width: 15rem;
+     height: 3.9rem;
+     overflow-x: visible;
+     overflow-y: hidden;
+}
+.p-description{
+  font-size: 1.1rem;
+  font-weight: lighter;
+}
+.p-name{
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+.p-price{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.p-replacement{
+ font-size: small; 
+}
+.cart-button{
+  display: none;
+}
 
   /* Styles for screens up to 500px wide */
   @media screen and (max-width: 600px) {
@@ -45,14 +68,14 @@
     .menu-button{
       display: inline-block;
       position: fixed;
-      margin-top: 0rem;
-      left: 80%;
+      margin-top: 0.3rem;
+      left: 85%;
       background-color: aliceblue;
       padding: 0.3rem;
       border-radius: 5rem;
     }
     .cart-button{
-      display: inline-block;
+      display: none;
       position: fixed;
       margin-top: 3.6rem;
       left: 80%;
@@ -71,10 +94,9 @@
     /* Overall */
     .card-collection {
       display: block;
+  
     }
-    .main-card {
-      display: flex;
-    }
+   
     .name-cont {
       overflow: hidden;
     }
@@ -86,12 +108,48 @@
       display: block;
       overflow: hidden;
     }
+    /* component */
+    .p-description{
+      font-size: 1.1rem;
+      font-weight: lighter;
+    }
+    .p-name{
+      font-weight: normal;
+      font-size: 1.2rem;
+    }
+    .p-price{
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .p-replacement{
+     font-size: small; 
+    }
     .p-image {
 
-      width: 21rem;
-      height: auto;
+      margin-top: 3rem;
+      margin-left: 0.3rem;
+      width: 9rem;
+      height: 10rem;
       border-left: 0;
     }
+    .p-view{
+      display: none;
+    }
+
+    /* main card */
+    .main-card {
+      display: flex;
+      width: 100%;
+    }
+    .child-card{
+      margin-left: 1rem;
+      width: 100%;
+    }
+    .main-card-1{
+      width: 100%;
+    }
+
+
   }
   
   /* Styles for screens between 501px and 800px wide */
@@ -105,7 +163,7 @@
    }
  
    .side-bar{
- 
+    
    }
  
    .container-custom {
@@ -267,14 +325,17 @@
     /* ---------- main ----------- */
     .overall-container{
       margin-top: 5rem;
-      display: grid;
-      grid-template-columns: 1fr 8fr;
+      /* display: grid; */
+      /* grid-template-columns: 1fr 8fr; */
+
+      display: flex;
       margin-left: 3rem;
       margin-right: 3rem;
     }
 
     .side-bar{
-
+     
+  
     }
 
     .container-custom {

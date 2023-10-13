@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top s-nav-body">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top s-nav-body">
     <div class="navbar-brand s-navbar-brand">Navbar</div>
     <form class="form-inline ml-auto s-form" >
         <input #myInput type="text"
@@ -11,9 +11,81 @@
     </form>
     <div class="ml-auto s-welcome">{{ welcome }}</div>
     <div class="ml-auto s-right-div">
-        <a routerLink="{{ signInorOutLink }}" class="btn">{{ signInorOut }}</a>
-        <a routerLink="/viewcart" class="btn">View Carts</a>
+        <a routerLink="{{ signInorOutLink }}" class="btn d-none d-lg-inline">{{ signInorOut }}</a>
+        <a routerLink="/viewcart" class="btn d-none d-lg-inline">View Carts</a>
     </div>
+</nav> -->
+
+<!-- FOR DESKTOP -->
+<nav class="desktop-nav">
+    <ul class="s-nav-list">
+        <li>
+            <div class="s-logo">
+                <img src="https://imgs.search.brave.com/eYzQ9plpbExvJ00alT8NZ7zaOnQnCChMIgHuPGY_s-I/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9yZXMu/Y2xvdWRpbmFyeS5j/b20vemVuYnVzaW5l/c3MvcV9hdXRvL3Yx/L2xvZ2FzdGVyL2xv/Z2FzdGVyLTIwMjAt/MDgtaC13YWxtYXJ0/LTkuanBn">
+            </div>
+        </li>
+        <li class="s-form-list">
+            <form class="form-inline ml-auto s-form" >
+                <input #myInput type="text"
+                       placeholder=" Search for products ..."
+                       class="s-input"
+                       (keyup.enter)="doSearch(myInput.value)" 
+                       
+                       />
+                <img (click)="doSearch(myInput.value)" class="s-search-button" src="https://imgs.search.brave.com/yLv6xetHtpUfkX5y7fsS2OsfUiisVt5emOFHWFANsZg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/Y2l0eXBuZy5jb20v/cHVibGljL3VwbG9h/ZHMvcHJldmlldy90/cmFuc3BhcmVudC1n/cmVlbi1zZWFyY2gt/aWNvbi1idXR0b24t/MTE2NDAwODQwMzl4/eGp0cnhkcWVqLnBu/Zw">
+            </form>
+        </li>
+        <li>
+            <div class="s-user">
+                    <img src="https://imgs.search.brave.com/Rs-4Q6q_rjgLJE523-vC_g_kKcZY3NdJzoDnJI9Ow9o/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbi1pY29ucy5j/b20vaWNvbnMyLzIx/Ny9QTkcvNTEyL3Vz/ZXItYmx1ZV8yNTMy/NS5wbmc">
+                </div>
+                <div class="s-on-user-click">
+
+                </div>
+        </li>
+        <li>
+            <div class="s-cart" routerLink="/viewcart">
+                <img src="https://imgs.search.brave.com/sRPPEVP7unCU_6k7OYBvx_dzwr3PHNu4xhjjoWl7N-8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9wbHVz/cG5nLmNvbS9pbWct/cG5nL2NhcnQtcGlj/dHVyZS1wbmctaW1h/Z2UtNjAwLnBuZw">
+            </div>
+        </li>
+        
+    </ul>
+
 </nav>
 
-<!-- Add your content below the navigation bar -->
+<!-- FOR MOBILE -->
+<nav class="mobile-nav">
+    <div class="s-mobile-header">
+        <ul class="s-mob-nav-1">
+            <li>
+                <div class="s-logo">
+                    <img src="https://imgs.search.brave.com/eYzQ9plpbExvJ00alT8NZ7zaOnQnCChMIgHuPGY_s-I/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9yZXMu/Y2xvdWRpbmFyeS5j/b20vemVuYnVzaW5l/c3MvcV9hdXRvL3Yx/L2xvZ2FzdGVyL2xv/Z2FzdGVyLTIwMjAt/MDgtaC13YWxtYXJ0/LTkuanBn">
+                </div>
+            </li>
+            
+            <li>
+                <div class="s-user">
+                    <img src="https://imgs.search.brave.com/Rs-4Q6q_rjgLJE523-vC_g_kKcZY3NdJzoDnJI9Ow9o/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbi1pY29ucy5j/b20vaWNvbnMyLzIx/Ny9QTkcvNTEyL3Vz/ZXItYmx1ZV8yNTMy/NS5wbmc">
+                </div>
+            </li>
+            <li>
+                <div class="s-cart" routerLink="/viewcart">
+                    <img src="https://imgs.search.brave.com/sRPPEVP7unCU_6k7OYBvx_dzwr3PHNu4xhjjoWl7N-8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9wbHVz/cG5nLmNvbS9pbWct/cG5nL2NhcnQtcGlj/dHVyZS1wbmctaW1h/Z2UtNjAwLnBuZw">
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    <div class="s-mobile-search">
+            <form class="form-inline ml-auto s-form" >
+                <input #myInput type="text"
+                       placeholder=" Search for products ..."
+                       class="s-input"
+                       (keyup.enter)="doSearch(myInput.value)" 
+                       
+                       />
+                <img (click)="doSearch(myInput.value)" class="s-search-button" src="https://imgs.search.brave.com/yLv6xetHtpUfkX5y7fsS2OsfUiisVt5emOFHWFANsZg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/Y2l0eXBuZy5jb20v/cHVibGljL3VwbG9h/ZHMvcHJldmlldy90/cmFuc3BhcmVudC1n/cmVlbi1zZWFyY2gt/aWNvbi1idXR0b24t/MTE2NDAwODQwMzl4/eGp0cnhkcWVqLnBu/Zw">
+            </form>
+        
+    </div>
+</nav>

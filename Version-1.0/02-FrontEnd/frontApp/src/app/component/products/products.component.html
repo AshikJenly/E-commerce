@@ -1,7 +1,4 @@
-<nav class="p-nav">
-    <app-search></app-search>
-
-</nav>
+<app-search></app-search>
 <!-- Buttons -->
     <!-- Menu Button -->
     <div class="menu-button">
@@ -21,9 +18,10 @@
     </div>
 <!-- ------------------- -->
 <!-- Overall Container -->
+
 <div class="overall-container">
-<div id="p-side-bar-elem" class="side-bar">
-    <app-product-category></app-product-category>
+    <div id="p-side-bar-elem" class="side-bar">
+        <app-product-category ></app-product-category>
 </div>
 
 <div class="container-custom cnt">
@@ -34,20 +32,22 @@
             <div class="main-card">
                 <div class="image-card">
                     <!-- <img class="p-image" src="/assets/image/wallpaper.jpg" alt="Card image cap"> -->                      
-                    <img src="https://placehold.co/200x200">
+                    <img class="p-image" src="https://placehold.co/200x200">
                 </div>
                 <div class="child-card">
                     <div class="">
                     <div class="name-cont">
-                        <h4 class="description">{{ product.description }}</h4>
+                        <h4 class="p-description">{{ product.description }}</h4>
                     </div>
-                    <h6 class="name">{{ product.name }}</h6>
-                    <h4 class="price">${{ product.unitPrice}}</h4>
-                    <p class="unitsinstock">available : {{product.unitsInStock}}</p>
+                    <h6 class="p-name">{{ product.name }}</h6>
+                    <h4 class="p-price">${{ product.unitPrice}}</h4>
+                    <p class="p-unitsinstock">available : {{product.unitsInStock}}</p>
+                    <div class="offer"></div>
+                    <div class="p-replacement">7 Day Service Center Replacement</div>
                 </div>
                     <div class="d-flex justify-content-between">
                     <!-- <a href="#" class="btn btn-warning mr-auto">Like</a> -->
-                    <a routerLink="/singleprod/{{ product.sku }}" class="btn btn-primary "
+                    <a routerLink="/singleprod/{{ product.sku }}" class="btn btn-primary p-view"
                         routerLinkActive="active-link">View</a>
                     </div>
                 </div>
