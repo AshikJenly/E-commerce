@@ -20,6 +20,7 @@ import { AuthGuard } from './usercredentials/auth.guard';
 import { CredentialService } from './service/credential.service';
 import { AddtocartService } from './postingService/addtocart.service';
 import { RegisterService } from './postingService/register.service';
+import { FooterComponent } from './component/footer/footer.component';
 
 const routes: Routes = [
   // Your other routes
@@ -47,6 +48,7 @@ const routes: Routes = [
     ViewproductComponent,
     LoginComponent,
     RegisterComponent,
+    FooterComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),

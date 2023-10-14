@@ -5,7 +5,6 @@
 
     /* background-color:rgb(186, 218, 239); */
     position: fixed;
-    
     /* height: 100vh; */
   }
     .pc-link :hover,
@@ -30,6 +29,7 @@
         font-weight: bolder;
         
     }
+  
 
 /* Globall */
   @media screen and (max-width: 500px) {

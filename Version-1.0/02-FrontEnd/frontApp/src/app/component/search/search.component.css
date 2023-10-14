@@ -3,7 +3,7 @@
 @media screen and (max-width: 600px) {
   .mobile-nav{
           /* display: block; */
-          background-color: aqua;
+          background-color: rgb(194, 196, 203);
           width: 100%;
           height: 5.3rem;
           position: fixed;
@@ -15,7 +15,7 @@
 
   .s-mobile-header{
     height: 3rem;
-    background-color: aquamarine;
+    background-color: rgb(194, 196, 203);
   }
   /* Nav List */
   .s-mob-nav-1{
@@ -25,12 +25,14 @@
   }
 
   /* logo */
-  .s-logo,
+  
   .s-logo img{
-    width: 7rem;
-    height: 2.6rem;
+    position: relative;
+    height: 4rem;
+    width: 6rem;
   }
- 
+  
+
   /* cart */
   .s-cart,
   .s-cart img{
@@ -112,9 +114,10 @@
         top: 0%;
         display: block;
         position: fixed;
-        width: 100%;
+        width: 100%;  
         height: 5rem;
-        background-color: aquamarine;
+        background-color: rgb(194, 196, 203);
+        /* background-color: rgb(227, 227, 226); */
       }
 
       /* Nav list */
@@ -128,15 +131,16 @@
       .s-logo,
       .s-logo img{
         width: 15rem;
-        height: 5rem;
+        height: 6rem;
       }
       /* cart */
       .s-cart,
       .s-cart img{
         width: 4rem;
-        height: 4rem;
+        height: 3rem;
       }
       .s-cart{
+        margin-top: 0.5rem;
         border-radius: 2rem;
         margin-right: 2rem;
       }
