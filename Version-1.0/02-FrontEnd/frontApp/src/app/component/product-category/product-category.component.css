@@ -1,11 +1,11 @@
 
 /* Global */
-  .pc-overall-container{
-    /* position: fixed; */
 
-    /* background-color:rgb(186, 218, 239); */
+
+  .pc-overall-container{
+  background-color: aqua;
+    width: 1fr;
     position: fixed;
-    /* height: 100vh; */
   }
     .pc-link :hover,
     .pc-link:active,
@@ -29,7 +29,14 @@
         font-weight: bolder;
         
     }
-  
+
+
+  .navbar-list{
+    /* background-color: blanchedalmond; */
+    height: 100vh;
+    overflow-y: scroll;
+    padding-bottom: 3.4rem;
+  }
 
 /* Globall */
   @media screen and (max-width: 500px) {
@@ -49,38 +56,43 @@
   }
   @media screen and (min-width: 601px) and (max-width: 899px) {
     .pc-overall-container{
-        width: 15%;
+        width: 27%;
         overflow-x: visible;
-        padding-left: 3rem;
-        padding-right: 3rem;   
+        padding-left: 1rem;
+        padding-right: 1rem;  
+
     }
 
   }
   @media screen and (min-width: 900px) and (max-width: 1300px) {
 
     .pc-overall-container{
-        width: 15%;
+        width: 20%;
         overflow-x: visible;
-        padding-left: 3rem;
-        padding-right: 3rem;   
+        padding-left: 1rem;
+        padding-right: 1rem;   
+
     }
   }
   @media screen and (min-width: 1301px) and (max-width:1600px) {
     .pc-overall-container{
-        width: 15%;
+        width: 18%;
         overflow-x: visible;
-        padding-left: 3rem;
-        padding-right: 3rem;   
+        padding-left: 1rem;
+        padding-right: 1rem;  
+
     }
   }
   @media screen and (min-width:1601px) and (max-width: 1800px) {
 
     .pc-overall-container{
-        width: 15%;
+        width: 17%;
         overflow-x: visible;
-        padding-left: 3rem;
-        padding-right: 3rem;   
+        padding-left: 1rem;
+        padding-right: 1rem;   
+
     }
+
 
 }
 
@@ -91,6 +103,11 @@
         overflow-x: visible;
         padding-left: 3rem;
         padding-right: 3rem;   
+
+        
     }
+  .navbar-list{
+
+  }
     
 }

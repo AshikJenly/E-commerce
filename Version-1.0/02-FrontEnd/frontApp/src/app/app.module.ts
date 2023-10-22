@@ -21,6 +21,9 @@ import { CredentialService } from './service/credential.service';
 import { AddtocartService } from './postingService/addtocart.service';
 import { RegisterService } from './postingService/register.service';
 import { FooterComponent } from './component/footer/footer.component';
+import { CheckoutComponent } from './component/checkout/checkout.component';
+import { PaymentmethodComponent } from './component/paymentmethod/paymentmethod.component';
+import { PurchaseComponent } from './component/purchase/purchase.component';
 
 const routes: Routes = [
   // Your other routes
@@ -33,8 +36,10 @@ const routes: Routes = [
   {path:'viewcart',component:CartComponent,canActivate:[AuthGuard]},
   {path:'login',component:LoginComponent},
   {path:'login/:logout',component:LoginComponent},
-  {path:'register',component:RegisterComponent}
-
+  {path:'register',component:RegisterComponent},
+  {path:'viewcart/checkout',component:CheckoutComponent},
+  {path:'viewcart/checkout/choose-payment-method',component:PaymentmethodComponent},
+  {path:'viewcart/checkout/choose-payment-method/purchase',component:PurchaseComponent}
 
 ];
 
@@ -49,6 +54,9 @@ const routes: Routes = [
     LoginComponent,
     RegisterComponent,
     FooterComponent,
+    CheckoutComponent,
+    PaymentmethodComponent,
+    PurchaseComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),

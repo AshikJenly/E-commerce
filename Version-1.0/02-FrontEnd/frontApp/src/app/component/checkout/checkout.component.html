@@ -1,0 +1,53 @@
+<h2>Billing details</h2>
+    <div class="checkout-page">
+        <div class="cp-address">
+            <h3 class="cp-summary-heading">User Details</h3>
+            <div class="cp-address-content">
+                <form>
+                    <div class="row">
+                        <div class="cp-form-group">
+                            <label for="Name">Name: </label>
+                            <input type="text" id="Name" class="cp-form-control" required>
+                        </div>
+                        <div class="cp-form-group">
+                            <label for="phoneNumber">Phone Number: </label>
+                            <input type="tel" id="phoneNumber" class="cp-form-control" required>
+                        </div>
+                        <div class="cp-form-group">
+                            <label for="address">Address: </label>
+                            <textarea id="address" class="cp-form-control" required></textarea>
+                        </div>
+                        <div class="cp-form-group">
+                            <label for="city">City: </label>
+                            <input type="text" id="city" class="cp-form-control" required>
+                        </div>
+                        <div class="cp-form-group">
+                            <label for="state">State: </label>
+                            <input type="text" id="state" class="cp-form-control" required>
+                        </div>
+                        <div class="cp-form-group">
+                            <label for="pincode">Pincode: </label>
+                            <input type="text" id="pincode" class="cp-form-control" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="cp-summary">
+            <div class="cp-total">
+                <h3 class="cp-summary-heading">Order Summary</h3>
+                <ul>
+                    <li>Total Price : <span style="float: right;">$ {{total}}</span></li>
+                    <li>Tax (10%) : <span style="float: right;">$ {{tax}}</span></li>
+                    <li>Discount : <span style="float: right; color: green;">-$ {{discount}}</span></li>
+                    <br>
+                    <br>
+                    <hr>
+                    <li class="cp-cart-total">Cart Total <span style="float: right;">$ {{cartTotal}}</span></li>
+                    <hr>
+                    <li><a routerLink="choose-payment-method" class="cp-continue-button">Continue</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>

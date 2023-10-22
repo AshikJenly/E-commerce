@@ -32,7 +32,7 @@ export class CartComponent implements OnInit {
       this.setTotal(response);
     });
     // Fetch cart products
-    await this.dataservice.getCartProducts(this.cid).subscribe(data => {
+     await this.dataservice.getCartProducts(this.cid).subscribe(data => {
       console.log(data);
       this.products = data;
       

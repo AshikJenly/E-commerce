@@ -1,0 +1,50 @@
+<h2>Payment Page</h2>
+    <div class="payment-page">
+        <div class="py-address">
+            <h3 class="py-summary-heading">Payment Options</h3>
+            <div class="py-address-content">
+                
+                    <label for="payment">Select Payment Option:</label>
+                    <select id="payment" [(ngModel)]="selectedOption">
+                        <option value="paytm-upi">Paytm/BHIM/UPI</option>
+                        <option value="credit-card">Credit/Debit Card</option>
+                        <option value="cash-on-delivery">Cash on Delivery</option>
+                    </select>
+                    <div *ngIf="selectedOption === 'paytm-upi'">
+                        <div class="py-form-group">
+                            <label for="upi-id">UPI ID:</label>
+                            <input type="text" id="upi-id" placeholder="Enter UPI ID" class="py-form-control" style="background-color: #fff;">
+                        </div>
+                        
+                    </div>
+                    <div *ngIf="selectedOption === 'credit-card'">
+                        <form>
+                            <div class="row">
+                                <div class="py-form-group">
+                                    <label for="Card-Number">Card Number: </label>
+                                    <input type="number" id="Card-Number" class="py-form-control" required>
+                                </div>
+                                <div class="py-form-row">
+                                    <div class="py-form-group">
+                                        <label for="expiryDate">Expiry Date: </label>
+                                        <input type="date" id="expiryDate" class="py-form-control" required>
+                                    </div>
+                                    <div class="py-form-group">
+                                        <label for="cvv">CVV: </label>
+                                        <input type="password" id="cvv" class="py-form-control" required>
+                                    </div>
+                                </div>
+                                <div class="py-form-group">
+                                    <label for="CH-Name">Name: </label>
+                                    <input type="text" id="CH-Name" class="py-form-control" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div *ngIf="selectedOption === 'cash-on-delivery'"> </div>
+                    <button class="py-button" [routerLink]="['purchase']">Place Order</button>
+                
+            </div>
+        </div>
+    </div>
+  
