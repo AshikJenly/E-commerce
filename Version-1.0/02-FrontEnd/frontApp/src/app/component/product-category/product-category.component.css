@@ -3,7 +3,6 @@
 
 
   .pc-overall-container{
-  background-color: aqua;
     width: 1fr;
     position: fixed;
   }
@@ -38,21 +37,16 @@
     padding-bottom: 3.4rem;
   }
 
-/* Globall */
-  @media screen and (max-width: 500px) {
-    .pc-overall-container{
-        /* left: -100%; */
-        /* position: fixed; */
-    }
-  }
- 
+
   @media screen and (max-width:600px) {
     .pc-overall-container{
-        width: 15%;
+        width: 70%;
         overflow-x: visible;
         padding-left: 3rem;
         padding-right: 3rem;   
-    }
+      /* background-color: blue; */
+
+      }
   }
   @media screen and (min-width: 601px) and (max-width: 899px) {
     .pc-overall-container{

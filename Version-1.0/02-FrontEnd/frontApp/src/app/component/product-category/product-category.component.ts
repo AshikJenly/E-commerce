@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductCategory } from 'src/app/common/product-category';
 import { DataService } from 'src/app/service/data.service';
+import { ProductsComponent } from '../products/products.component';
 
 @Component({
   selector: 'app-product-category',
@@ -8,9 +9,11 @@ import { DataService } from 'src/app/service/data.service';
   styleUrls: ['./product-category.component.css']
 })
 export class ProductCategoryComponent {
+
+
   productCategories: ProductCategory[] = [];
   
-  constructor(private productService: DataService) { }
+  constructor(private productService: DataService,private Products:ProductsComponent) { }
 
   ngOnInit() {
     this.productService.getProductCategories().subscribe(
@@ -22,5 +25,10 @@ export class ProductCategoryComponent {
     console.log(this.productCategories);
   }
 
+
+ menubarButton()
+ {
+    this.Products.menubarButton();
+ }
   
 }
