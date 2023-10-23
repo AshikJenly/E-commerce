@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { Product } from 'src/app/common/product';
 import { AddtocartService } from 'src/app/postingService/addtocart.service';
 import { DataService } from 'src/app/service/data.service';
 
@@ -12,6 +11,7 @@ import { DataService } from 'src/app/service/data.service';
 })
 export class PurchaseComponent {
   cid: any = "0";
+  message : any = ""
   baseUrl = "http://localhost:4201/cartcontroller/purchaseduser"
   constructor(
     private http: HttpClient,
@@ -29,20 +29,28 @@ export class PurchaseComponent {
     
   }
 
-
+  setMessage(message:any)
+  {
+      this.message = message;
+  }
 
   placeOrder():any
   {
 
-      const url = `${this.baseUrl}?cid=${this.cid}`;
-      this.http.get(url).subscribe(
-        (result) => {
-          console.log('HTTP GET request result:', result);
-        },
-        (error) => {
-          console.error('HTTP GET request error:', error);
-        }
-      );
+    const url = `${this.baseUrl}?cid=${this.cid}`;
+    this.http.get(url, { responseType: 'text' }).subscribe(
+      (result) => {
+        console.log('HTTP GET request result:', result);
+        this.setMessage(result);
+        // Process the response string here
+      },
+      (error) => {
+        console.error('HTTP GET request error:', error);
+        this.setMessage("Server error, Please contace support team!")
+        // Handle the error here
+      }
+    );
+    
 
   }
 

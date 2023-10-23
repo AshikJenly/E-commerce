@@ -1,8 +1,9 @@
 .payment-page {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     padding: 10px;
 }
+
 
 .payment-page .py-address{
     width: 60%;
