@@ -2,43 +2,52 @@
   <app-search></app-search>
 </nav>
 
-<div class="custom-container" >
+<div class="custom-container">
+<a class="vp-go-back" href="javascript:history.back()">
+  <img class="vp-btn-gb" src="https://imgs.search.brave.com/JHbpimK6bKehrwW5Q4QCiGFHPKs8jjMq7CG6CCP1SoU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pY29u/cy52ZXJ5aWNvbi5j/b20vcG5nLzEyOC9p/bnRlcm5ldC0td2Vi/L2JpbGxpb24tc3F1/YXJlLWNsb3VkL2Jh/Y2stMjYucG5n">
+</a>
+
   <div class="row">
-    <!-- <div class="col-12 col-md-1 ml-4 mr-1" style="margin-top: 4rem;" id="catid">
+    <!--
+    <div class="col-12 col-md-1 ml-4 mr-1" style="margin-top: 4rem;" id="catid">
       <app-product-category></app-product-category>
-    </div> -->
-    <div class="col-12 col-md-10" style="margin-top: 4rem;">
-      <div class="container">
-        <div class="product-details">
-          <div class="row">
-            <div class="col-12 col-md-6 product-image">
-              <img src="https://placehold.co/400x400" alt="Product Image" class="img-fluid">
-            </div>
-            <div class="col-12 col-md-6 card-body product-info">
-              <h2 class="card-title">{{ products[0].name }}</h2>
-              <p class="card-text"><strong>SKU:</strong> {{ products[0].sku }}</p>
-              <p class="card-text"><strong>Description:</strong> {{ products[0].description }}</p>
-              <p class="card-text"><strong>Price:</strong> {{ products[0].unitPrice | currency }}</p>
-              <p class="card-text"><strong>Active:</strong> {{ products[0].active ? 'Yes' : 'No' }}</p>
-              <p class="card-text"><strong>Units in Stock:</strong> {{ products[0].unitsInStock }}</p>
-              <p class="card-text"><strong>Date Created:</strong> {{ products[0].dateCreated | date }}</p>
-              <p class="card-text"><strong>Last Updated:</strong> {{ products[0].lastUpdated | date }}</p>
-              <a href="javascript:history.back()">Go Back</a>
-            </div>
+    </div>
+    -->
+    <div class="container">
+      <div class="product-details">
+        <div class="vp-itemcont">
+          <div class="product-image">
+            <img src="https://placehold.co/400x400" alt="Product Image" class="img-fluid">
+          </div>
+          <div class="product-info">
+            <h2 class="card-title">{{ products[0].name }}</h2>
+            <p class="card-text"><strong>SKU:</strong> {{ products[0].sku }}</p>
+            <p class="card-text"><strong>Description:</strong> {{ products[0].description }}</p>
+            <p class="card-text"><strong>Price:</strong> {{ products[0].unitPrice | currency }}</p>
+            <p class="card-text"><strong>Active:</strong> {{ products[0].active ? 'Yes' : 'No' }}</p>
+            <p class="card-text"><strong>Units in Stock:</strong> {{ products[0].unitsInStock }}</p>
+            <p class="card-text"><strong>Date Created:</strong> {{ products[0].dateCreated | date }}</p>
+            <p class="card-text"><strong>Last Updated:</strong> {{ products[0].lastUpdated | date }}</p>
           </div>
         </div>
-        <div class="cart-buttons">
-          <button class="add-button" (click)="onAddButtonClick()">
-            <i class="fa fa-plus-circle" style="font-size: xx-large;" aria-hidden="true">+</i>
-          </button>
-          <span>{{count}}</span>
-          <button class="remove-button" (click)="onRemoveButtonClick()">
-            <i class="fa fa-minus-circle" style="font-size: xx-large;" aria-hidden="true">-</i>
-          </button>
-        </div>
-        
+      </div>
+      
+      <div class="vp-add">
+          <div *ngIf="products[0].unitsInStock <= 0; then productNotFound else productFound" class="cart-button-not-fount">Product unavailable</div>
+          <ng-template #productNotFound>Product unavailable</ng-template>
+          <ng-template class="cart-buttons " #productFound>
+            <button class="add-button vp-btn" (click)="onAddButtonClick()">
+              <img class="vp-buttons" src="/assets/image/logos/add.png">
+              <!-- <i class="fa fa-plus-circle" style="font-size: xx-large;" aria-hidden="true">+</i> -->
+            </button>
+            <span class="vp-count">{{ count }}</span>
+            <button class="remove-button vp-btn" (click)="onRemoveButtonClick()">
+              <img class="vp-buttons" src="/assets/image/logos/remove.png">
+              <!-- <i class="fa fa-minus-circle" style="font-size: xx-large;" aria-hidden="true">-</i> -->
+            </button>
+          </ng-template>
       </div>
     </div>
   </div>
-  <router-outlet></router-outlet>
 </div>
+<router-outlet></router-outlet>

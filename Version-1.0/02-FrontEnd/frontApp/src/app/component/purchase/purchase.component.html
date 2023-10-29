@@ -1,4 +1,22 @@
+<h1 class="pc-heading">J-Mart Billing</h1>
+<div *ngIf="message==='success';then success else failure"></div>
+<ng-template #success>
+    <div class="success-page" >
+        <div class="success-content">
+            <h1>Successfully Purchased</h1>
+            <p>Thank you for your purchase!</p>
+            <button class="btn btn-success" [routerLink]="['/category']">Back to Shop</button>    
+        </div>
+    </div>
+</ng-template>
 
-<h1>{{message}}</h1>
+<ng-template #failure>
+    <div style="background-color: rgb(250, 200, 200);" class="success-page" >
+        <div class="success-content">
+            <h1 style="color: rgb(158, 2, 2);">Payment Failed</h1>
+            <p style="color: rgb(239, 77, 77);" >Sorry, {{message}}</p>
+            <button class="btn btn-danger" [routerLink]="['/category']">Back to Cart</button>    
+        </div>
+    </div>
+</ng-template>
 
-<button [routerLink]="['/category']">Back to Cart</button>

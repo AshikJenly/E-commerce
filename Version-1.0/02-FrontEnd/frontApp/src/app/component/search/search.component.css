@@ -1,6 +1,67 @@
 
+.sc-welcome-message{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+.s-signinout{
+  background-color: whitesmoke ;
+  width: 25rem;
+  height: 17rem;
+  position: absolute;
+  right: 2%;
+  top: 4rem;
+  border-radius: 1rem;
+  border: 2px solid rgb(203, 202, 202);
+}
+.btn-warning{
+  width: 60%;
+  margin-left: 5rem;
+}
+.s-sign-login
+{
+  padding-top: 1rem;
+}
+.s-like-btn{
+  width: 60%;
+  margin-left: 8rem;
+}
+.s-sign-ul
+{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 9rem;
+}
+.s-sign-ul li{
+  list-style: none;
+}
+.s-sign-a{
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+}
+.s-sign-a:hover{
+text-decoration: underline;
+}
+
+
 /* Mobile */
 @media screen and (max-width: 600px) {
+  .s-signinout{
+    width: 18rem;
+  right: 15%;
+
+  }
+  .s-sign-a{
+    font-size: 1rem;
+  }
+  .s-like-btn{
+    margin-left: 4rem;
+    }
+  .btn-warning{
+    margin-left: 4.5rem;
+  }
   .mobile-nav{
           /* display: block; */
           background-color: rgb(194, 196, 203);
@@ -103,9 +164,9 @@
 
 
 
-
-/* Desktop */
+/* tab */
 @media screen and (min-width: 601px) {
+
 
   .mobile-nav{
     display: none;

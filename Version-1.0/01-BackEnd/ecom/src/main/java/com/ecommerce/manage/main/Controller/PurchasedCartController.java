@@ -56,7 +56,7 @@ public class PurchasedCartController {
                 }
             System.out.println("--------------");
 
-                return new ResponseEntity<>("Successfully Purchased!", HttpStatus.OK);
+                return new ResponseEntity<>("success", HttpStatus.OK);
             }
         } catch (Exception e) {
             // Handle any exceptions here, and return an appropriate response

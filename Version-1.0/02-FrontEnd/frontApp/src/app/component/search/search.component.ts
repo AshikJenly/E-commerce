@@ -12,6 +12,7 @@ export class SearchComponent {
   signInorOut:string = "Sign In"
   signInorOutLink:string = "/login"
   welcome = ""
+  showHoverDiv: boolean = false;
 
   constructor(private router: Router,private credserv:CredentialService) { }
 
@@ -21,7 +22,7 @@ export class SearchComponent {
     {
       this.signInorOut = "Sign Out"
       this.signInorOutLink = "/login/logout?=''"
-      this.welcome = `Welcome ${this.credserv.getuserName()}!`
+      this.welcome = `Hello! ${this.credserv.getuserName()}`
     }
   
   }

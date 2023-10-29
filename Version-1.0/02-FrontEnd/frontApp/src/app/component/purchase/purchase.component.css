@@ -1,0 +1,47 @@
+.success-page{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60vh;
+    padding-top: 8%;
+    background-color: rgb(204, 244, 204);
+    border-radius: 2rem;
+}
+.success-content{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pc-heading{
+
+}
+.success-content h1{
+font-size: 3rem;
+font-weight: bolder;
+color: rgb(7, 70, 7);
+}
+.success-content p{
+    font-size: 1.4rem;
+    color: green;
+}
+.pc-heading{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+@media screen and (max-width:1000px) {
+    .success-page{
+        
+        width: 100%;
+        
+    }
+    .pc-heading{
+        width: 90%;
+    }
+    .success-content{
+        width: 80%;
+    }
+}
