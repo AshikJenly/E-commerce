@@ -1,0 +1,189 @@
+.prod-add-page {
+    /* display: flex; */
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+.prod-add-page .pa-container{
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pa-container{
+    width: 40%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.pa-content{
+    margin-left: 1rem;
+    display: flex;
+}
+.pa-dropzone {
+    flex: 1;
+    /* position: absolute; */
+    height: 300px;
+    min-width: 100px;
+    display: table;
+    background-color: #eee;
+    width: 300px;
+    border: dashed 1px #aaa;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+
+
+.pa-form-group {
+    flex: 1;
+    margin: 1.25rem;
+
+}
+.pa-form-group label {
+    display: inline-block;
+    width: 20%;
+    text-align: left;
+    padding-right: 3rem;
+}
+.pa-text-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.pa-centered {
+    text-align: center;
+}
+
+
+.pa-form-group .pa-form-control {
+    display: inline-block;
+    width: 50%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+}
+
+.pa-form-group .pa-form-control:hover {
+    border-color: #007bff; 
+}
+
+.pa-form-group .pa-form-control:focus {
+    outline: none;
+    border-color: #007bff; /* Change border color when input is focused */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle box-shadow on focus */
+}
+
+.pa-summary-heading{
+    background-color: cadetblue;
+    border-radius: 10px;
+    color: white;   
+    text-transform: uppercase;
+    padding: 10px;
+    margin-bottom: 2px;
+    margin-top: 0px;
+}
+.pa-button {
+    position: relative;
+    left: 20%;
+    width: 40%;
+    padding: 10px 20px; 
+    border: 1px solid black;
+    border-radius: 5px; 
+    background-color: #fff; 
+    color: cadetblue; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 2rem;
+}
+
+.pa-button:hover {
+    background-color: cadetblue;
+    color: #fff;
+}
+
+#prod-add {
+    border: 1px solid #ccc;
+    background-color: #fff; /* Set background color to white */
+    padding: 10px;
+    border-radius: 5px;
+    width: 20vh;
+    transition: border-color 0.2s;
+  }
+  
+  /* Add hover effect */
+  #prod-add:hover {
+    border-color: #007BFF;
+  }
+  
+  /* Add some space around the select element */
+  #prod-add {
+    margin-bottom: 10px;
+  }
+
+  /* Add your existing CSS rules here */
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+    .prod-add-page .pa-container{
+        width: 95%;
+        top: 55%;
+        margin: 0;
+    }
+    .pa-form-group {
+        margin: 1rem 0rem 0rem 0rem;
+        width: 100%; 
+        text-align: left;
+        padding-right: 10px;
+    }
+    .pa-form-group label {
+        padding-right: 20px;
+    }
+
+    .pa-container,
+    .pa-summary {
+        border: none; 
+        margin: 0; 
+        width: 100%; 
+    }
+    .pa-content{
+        flex-direction: column;
+    }
+    .pa-form-control{
+        display: inline-block;
+        width: 60%;
+        padding: 10px;
+        margin-left: 1rem;
+    }
+
+    .pa-summary {
+        margin-top: 20px; /* Add some spacing between sections */
+    }
+    #prod-add{
+        width: 20vh;
+        margin-left: 1rem;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .prod-add-page .pa-container{
+        width: 85%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .pa-form-group {
+        margin-right: 0;
+    }
+    .pa-form-group label {
+        padding-right: 1rem;
+    }
+}
+
+

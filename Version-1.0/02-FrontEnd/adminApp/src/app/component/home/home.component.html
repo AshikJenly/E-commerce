@@ -1,0 +1,36 @@
+<div class="admin-home-container">
+    <div class="ah-content">
+        <div class="ah-card" [routerLink]="['/addproduct']" style="cursor: pointer">
+            <div class="ah-add-content">
+                <div class="ah-head">
+                    <h5 style="margin: 0;">Add Product</h5>
+                </div>
+                <div class="ah-body">
+                    <img src="https://placehold.co/200x200" alt="placeholder image">
+                </div>
+                <div class="ah-description">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div>
+                    <button class="ah-button">Add Product</button>
+                </div>
+            </div>
+        </div>
+        <div class="ah-card" [routerLink]="['/addcategory']" style="cursor: pointer">
+            <div class="ah-add-content">
+                <div class="ah-head">
+                    <h5 style="margin: 0;">Add Category</h5>
+                </div>
+                <div class="ah-body">
+                    <img src="https://placehold.co/200x200" alt="placeholder image">
+                </div>
+                <div class="ah-description">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div>
+                    <button routerLink="/login" class="ah-button" >Add Category</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

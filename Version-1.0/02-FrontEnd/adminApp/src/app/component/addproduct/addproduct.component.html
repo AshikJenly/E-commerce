@@ -1,0 +1,88 @@
+
+<h2>Product Add Page</h2>
+<div class="prod-add-page">
+    <div class="pa-container">
+        <h3 class="pa-summary-heading">Options</h3>
+        <div class="pa-content">
+            <div id="credit-card-details">
+                <form>
+                    <div class="pa-row">
+                        <div class="pa-form-group">
+                            <label for="Name">Name: </label>
+                            <input type="text" id="Name" class="pa-form-control" required>
+                        </div>
+                        <div class="pa-form-group">
+                            <label for="prod-add">Category:</label>
+                            <select id="prod-add">
+                                <option value="electronics">Electronics</option>
+                                <option value="mobile-phones">Mobile phones</option>
+                                <option value="toys">Toys</option>
+                            </select>
+                        </div>
+                        <div class="pa-form-group">
+                            <label for="phoneNumber">Price: </label>
+                            <input type="tel" id="phoneNumber" class="pa-form-control" required>
+                        </div>
+                        <div class="pa-form-group">
+                            <label for="description">Description: </label>
+                            <textarea id="description" class="pa-form-control" required></textarea>
+                        </div>                           
+                    </div>
+                </form>
+            </div>
+            <div class="pa-dropzone">
+                <div class="pa-text-wrapper">
+                    <div class="pa-centered">
+                        Drag and drop your file or
+                        <a id="browse-button" class="browse-button" href="#">browse</a>
+                        a file
+                    </div>
+                </div>
+            </div>
+            <input multiple type="file" id="selectFile" style="display: none;" value="select">
+        </div>
+        <button class="pa-button">Add Product</button>
+    </div>
+</div>
+
+<script>
+    // Get references to the elements
+const dropzone = document.querySelector(".pa-dropzone");
+const selectFileInput = document.getElementById("selectFile");
+const browseButton = document.getElementById("browse-button");
+
+// Function to trigger the file input click event
+function browseFile() {
+selectFileInput.click();
+}
+
+// Event listener for the browse button
+browseButton.addEventListener("click", function (e) {
+e.preventDefault(); // Prevent the default link behavior
+browseFile();
+});
+
+// Event listener for the file input
+selectFileInput.addEventListener("change", function (e) {
+// Handle file selection here (you can add your logic)
+const selectedFiles = e.target.files;
+// You can process the selected files as needed
+});
+
+// Function to simulate dropping files (you can add your logic)
+function dropFiles() {
+// Simulate dropping files into the dropzone
+// You can add your logic for handling dropped files
+}
+
+// Event listeners for drag and drop functionality (you can add your logic)
+dropzone.addEventListener("dragover", function (e) {
+e.preventDefault();
+});
+
+dropzone.addEventListener("drop", function (e) {
+e.preventDefault();
+dropFiles();
+});
+
+</script>

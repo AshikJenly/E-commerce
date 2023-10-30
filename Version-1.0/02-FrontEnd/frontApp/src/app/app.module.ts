@@ -7,6 +7,7 @@ import { ProductsComponent } from './component/products/products.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './component/cart/cart.component';
 
+
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './service/data.service';
 import { ProductCategoryComponent } from './component/product-category/product-category.component';
@@ -26,7 +27,7 @@ import { PaymentmethodComponent } from './component/paymentmethod/paymentmethod.
 import { PurchaseComponent } from './component/purchase/purchase.component';
 
 const routes: Routes = [
-  // Your other routes
+
   {path: '', component: ProductsComponent},
   {path: 'search/:keyword', component: ProductsComponent},
   {path: 'category/:id', component: ProductsComponent},

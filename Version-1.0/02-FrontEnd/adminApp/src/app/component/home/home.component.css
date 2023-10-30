@@ -1,0 +1,71 @@
+.admin-home-container .ah-content{
+    width: 65%;
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+}
+
+.ah-card{
+    height: auto;
+    width: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.ah-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); 
+    background-color: #3498db; 
+    border: 1px solid #2980b9; 
+}
+
+
+.ah-add-content{
+    margin: 1rem;
+}
+
+.ah-head {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.ah-body {
+    text-align: center;
+}
+
+.ah-description{
+    text-align: center;
+}
+
+.ah-button {
+    text-align: center;
+    width: auto;
+    padding: 10px 20px; 
+    border: 1px solid black;
+    border-radius: 5px; 
+    background-color: #fff; 
+    color: cadetblue; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 2rem;
+}
+
+.ah-button:hover {
+    background-color: cadetblue;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .admin-home-container .ah-content{
+        top:80%;
+        width: 100%;
+    }
+    .ah-content{
+        flex-direction: column;
+    }
+
+}
