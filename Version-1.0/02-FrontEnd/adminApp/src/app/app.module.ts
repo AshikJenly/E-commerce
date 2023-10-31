@@ -12,6 +12,8 @@ import { CredentialService } from './service/credential.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './component/home/home.component';
+import { NavigationComponent } from './component/navigation/navigation.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 const routes: Routes =[
   {path:'home',component:HomeComponent},
@@ -30,7 +32,9 @@ const routes: Routes =[
     AddcategoryComponent,
     RegisterComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    NavigationComponent,
+    FooterComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

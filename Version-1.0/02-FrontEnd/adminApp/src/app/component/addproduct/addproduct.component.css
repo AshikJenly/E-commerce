@@ -1,3 +1,4 @@
+
 .prod-add-page {
     /* display: flex; */
     justify-content: space-between;
@@ -25,7 +26,7 @@
 }
 .pa-dropzone {
     flex: 1;
-    /* position: absolute; */
+    position: absolute;
     height: 300px;
     min-width: 100px;
     display: table;
