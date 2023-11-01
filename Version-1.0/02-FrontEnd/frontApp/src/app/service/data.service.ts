@@ -75,12 +75,12 @@ export class DataService {
     _embedded: {
       product: Product[];
     }
-    page: {
-      size: number,
-      totalElements: number,
-      totalPages: number,
-      number: number
-    }
+    // page: {
+    //   size: number,
+    //   totalElements: number,
+    //   totalPages: number,
+    //   number: number
+    // }
   }
 
   interface GetResponseProductCategory {

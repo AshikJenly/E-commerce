@@ -10,7 +10,7 @@ import { DataserviceService } from 'src/app/service/dataservice.service';
 export class AddproductComponent {
 
   url:string = "http://localhost:4201/productcontroller/postproduct";
-
+  allcategorynames:any;
   formData = {
     "sku":'',
     "name":'',
@@ -23,6 +23,17 @@ export class AddproductComponent {
   };
 
   constructor(private dataservice:DataserviceService){}
+  ngOnInit()
+  {
+    this.dataservice.getAllCategoryNames().subscribe(
+      (response)=>{
+        this.allcategorynames = response;
+      },
+      (error)=>{
+
+      }
+    )
+  }
   OnSubmit(form:NgForm)
   {
     console.log(this.formData)
@@ -37,6 +48,15 @@ export class AddproductComponent {
       }
     )
     
+  }
+
+  handleFileInput(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      this.formData.imageUrl = file.name;
+    } else {
+      this.formData.imageUrl = '';
+    }
   }
 }
 

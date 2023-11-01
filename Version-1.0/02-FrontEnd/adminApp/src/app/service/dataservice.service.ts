@@ -9,7 +9,10 @@ export class DataserviceService {
   constructor(private http:HttpClient) { }
 
 
-
+  getAllCategoryNames()
+  {
+    return this.http.get("http://localhost:4201/productcontroller/getcategorynames");
+  }
   addProduct(url:string,data:any)
   {
     console.log(url,data)

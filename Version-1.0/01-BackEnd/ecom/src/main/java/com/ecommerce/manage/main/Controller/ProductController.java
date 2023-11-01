@@ -1,7 +1,11 @@
 package com.ecommerce.manage.main.Controller;
 
+import java.util.List;
+
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,13 +27,17 @@ public class ProductController {
     @Autowired
     private ProductCategoryRepository productCategoryRepo;
 
+    @GetMapping("/getcategorynames")
+    public List<String> getcategorynames()
+    {
+          return productCategoryRepo.getAllCategoryName();
+    }
     @PostMapping("/postproduct")
     public void addNewProduct(@RequestBody Product product) {
 
-        Long lastId = productRepo.findLastProductId();
-        String sku = "SKU" + lastId;
-        product.setSku(sku);
-
+        Long lastId = productRepo.findLastProductId() + 1;
+        String sku = "SKU" + lastId ;
+        System.out.println(sku);
         String categoryName = product.getCategory().getName();
 
         ProductCategory productCategory = productCategoryRepo.findByName(categoryName);
@@ -49,10 +57,16 @@ public class ProductController {
           //Product Logic
         if (productRepo.existsByName(product.getName())) {
             // Handle the case where the product already exists
-            System.out.println("Existing product: " + product);
-        
+            Product existingProduct = productRepo.findByName(product.getName());
+            existingProduct.setUnitPrice(product.getUnitPrice());
+            existingProduct.setUnitsInStock(product.getUnitsInStock());
+            existingProduct.setImageUrl(product.getImageUrl());
+
+            System.out.println("Existing product: " + existingProduct);
+            productRepo.save(existingProduct);
           } else {
             // Save the new product to the database
+            product.setSku(sku);
             System.out.println("New product: " + product);
             productRepo.save(product);
         }
