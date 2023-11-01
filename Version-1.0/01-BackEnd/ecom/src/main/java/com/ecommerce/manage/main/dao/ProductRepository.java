@@ -21,11 +21,20 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     Page<Product> findByCategoryId(@Param("id") Long id,Pageable pageable);
     Page<Product> findByNameContaining(@Param("name") String name,Pageable pageable);
 
+    boolean existsByName(String name);
+    
     @Query("SELECT p.unitsInStock FROM Product p WHERE p.sku = :sku")
     Long findUnitsInStockBysku(@Param("sku") String sku);
+
+    @Query(value = "SELECT MAX(id) FROM product", nativeQuery = true)
+    Long findLastProductId();
+
+    Product findByName(String name);
 
     @Modifying
     @Transactional
     @Query("UPDATE Product p SET p.unitsInStock = :value WHERE p.sku = :sku")
     int updateUnitsInStockBySku(@Param("sku") String sku,Long value);
+
+    
 }

@@ -4,32 +4,48 @@
         <h3 class="pa-summary-heading">Options</h3>
         <div class="pa-content">
             <div id="credit-card-details">
-                <form>
+                <form #addproductForm="ngForm" (ngSubmit)="OnSubmit(addproductForm)">
                     <div class="pa-row">
                         <div class="pa-form-group">
+                            <label for="Name">Sku: </label>
+                            <input type="text" id="sku" class="pa-form-control" name="sku" [(ngModel)]="formData.sku" required>
+                        </div>
+                        <div class="pa-form-group">
                             <label for="Name">Name: </label>
-                            <input type="text" id="Name" class="pa-form-control" required>
+                            <input type="text" id="Name" class="pa-form-control" name="name" [(ngModel)]="formData.name" required>
                         </div>
                         <div class="pa-form-group">
                             <label for="prod-add">Category:</label>
-                            <select id="prod-add">
+                            <select id="prod-add" name="categoryname"  [(ngModel)]="formData.category.name">
                                 <option value="electronics">Electronics</option>
                                 <option value="mobile-phones">Mobile phones</option>
                                 <option value="toys">Toys</option>
+                                <option value="toys">Mobile</option>
+                                <option value="toys">Redmi</option>
+                                <option value="toys">Blaster</option>
+
                             </select>
                         </div>
                         <div class="pa-form-group">
                             <label for="phoneNumber">Price: </label>
-                            <input type="tel" id="phoneNumber" class="pa-form-control" required>
+                            <input type="tel" id="phoneNumber" class="pa-form-control" name="unitPrice" [(ngModel)]="formData.unitPrice" required>
+                        </div>
+                        <div class="pa-form-group">
+                            <label for="phoneNumber">Count: </label>
+                            <input type="tel" id="phoneNumber" class="pa-form-control" name="unitsInStock" [(ngModel)]="formData.unitsInStock" required>
                         </div>
                         <div class="pa-form-group">
                             <label for="description">Description: </label>
-                            <textarea id="description" class="pa-form-control" required></textarea>
-                        </div>                           
+                            <textarea id="description" class="pa-form-control" name="description" [(ngModel)]="formData.description" required></textarea>
+                        </div>   
+                                          
+                    </div>
+                    <div>
+                        <button class="pa-button">Add Product</button>
                     </div>
                 </form>
             </div>
-            <div class="pa-dropzone">
+            <!-- <div class="pa-dropzone">
                 <div class="pa-text-wrapper">
                     <div class="pa-centered">
                         Drag and drop your file or
@@ -38,10 +54,9 @@
                     </div>
                 </div>
             </div>
-            <input multiple type="file" id="selectFile" style="display: none;" value="select">
-        </div>
-        <button class="pa-button">Add Product</button>
-    </div>
+            <input multiple type="file" id="selectFile" style="display: none;" value="select"> -->
+        
+
 </div>
 
 <script>

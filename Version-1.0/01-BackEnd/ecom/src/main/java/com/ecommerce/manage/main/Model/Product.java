@@ -54,7 +54,7 @@ public class Product {
     public String toString() {
         return "Product [id=" + id + ", sku=" + sku + ", name=" + name + ", description=" + description + ", unitPrice="
                 + unitPrice + ", imageUrl=" + imageUrl + ", active=" + active + ", unitsInStock=" + unitsInStock
-                + ", dateCreated=" + dateCreated + ", lastUpdated=" + lastUpdated + ", category=" + category + "]";
+                + ", dateCreated=" + dateCreated + ", lastUpdated=" + lastUpdated + "]";
     }
 
 }

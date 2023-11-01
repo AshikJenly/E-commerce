@@ -4,9 +4,12 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
-  
+    z-index: 0;
     justify-content: space-between;
+}
+
+.ah-content{
+    margin-top: 10%;
 }
 
 .ah-card{

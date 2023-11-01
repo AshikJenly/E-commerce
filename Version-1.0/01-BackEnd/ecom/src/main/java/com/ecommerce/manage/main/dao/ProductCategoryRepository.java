@@ -19,4 +19,7 @@ import org.springframework.data.domain.Pageable;
 public interface ProductCategoryRepository extends JpaRepository<ProductCategory, Long> {
     Page<ProductCategory> findByid(@Param("id") Long id,Pageable pageable);
 
+    boolean existsByName(String name);
+
+    ProductCategory findByName(String name);
 }
