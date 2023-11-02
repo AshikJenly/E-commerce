@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './component/home/home.component';
 import { NavigationComponent } from './component/navigation/navigation.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { EditProductComponent } from './component/edit-product/edit-product.component';
 
 const routes: Routes =[
   {path:'home',component:HomeComponent},
@@ -21,8 +22,8 @@ const routes: Routes =[
   {path:'login/:logout',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'addproduct',component:AddproductComponent,canActivate:[AuthGuard]},
-  {path:'addcategory',component:AddcategoryComponent,canActivate:[AuthGuard]}
-   
+  {path:'addcategory',component:AddcategoryComponent,canActivate:[AuthGuard]},
+  {path:'editproduct',component:EditProductComponent}
 ]
 
 @NgModule({
@@ -34,7 +35,8 @@ const routes: Routes =[
     LoginComponent,
     HomeComponent,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    EditProductComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

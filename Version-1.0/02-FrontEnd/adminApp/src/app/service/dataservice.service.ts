@@ -18,4 +18,9 @@ export class DataserviceService {
     console.log(url,data)
       return this.http.post(`${url}?product=`,data);
   }
+
+  getproducttoupdate(name:any)
+  {
+    return this.http.get(`http://localhost:4201/api/products/search/findByName?name=${name}`)
+  }
 }

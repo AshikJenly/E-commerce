@@ -4,11 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ecommerce.manage.main.Model.Product;
@@ -32,8 +34,11 @@ public class ProductController {
     {
           return productCategoryRepo.getAllCategoryName();
     }
+
+  
+
     @PostMapping("/postproduct")
-    public void addNewProduct(@RequestBody Product product) {
+    public String addNewProduct(@RequestBody Product product) {
 
         Long lastId = productRepo.findLastProductId() + 1;
         String sku = "SKU" + lastId ;
@@ -64,11 +69,14 @@ public class ProductController {
 
             System.out.println("Existing product: " + existingProduct);
             productRepo.save(existingProduct);
+            return "Product Updated Successfully";
           } else {
             // Save the new product to the database
             product.setSku(sku);
             System.out.println("New product: " + product);
             productRepo.save(product);
+            return "Product Added Successfully";
+
         }
     }
 }

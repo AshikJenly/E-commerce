@@ -4,11 +4,11 @@ import {  Router } from '@angular/router';
 import { DataserviceService } from 'src/app/service/dataservice.service';
 
 @Component({
-  selector: 'app-addproduct',
-  templateUrl: './addproduct.component.html',
-  styleUrls: ['./addproduct.component.css']
+  selector: 'app-edit-product',
+  templateUrl: './edit-product.component.html',
+  styleUrls: ['./edit-product.component.css']
 })
-export class AddproductComponent {
+export class EditProductComponent {
 
   url:string = "http://localhost:4201/productcontroller/postproduct";
   allcategorynames:any;
@@ -26,15 +26,7 @@ export class AddproductComponent {
     "category":{'name':''}
   };
 
-  formPlaceholder={
-    "name":'',
-    "description":'',
-    "unitPrice":'',
-    "imageUrl":'',
-    "active":true,
-    "unitsInStock":'',
-    "category":{'name':''}
-  }
+ 
   
   constructor(private dataservice:DataserviceService,private route:Router){}
   ngOnInit()
@@ -111,6 +103,35 @@ export class AddproductComponent {
       this.formData.imageUrl = file.name;
     } else {
       this.formData.imageUrl = '';
+    }
+  }
+
+
+  updateFormData(data:any){
+    console.log(data)
+    this.formData.unitPrice = data.unitPrice;
+    this.formData.unitsInStock  = data.unitsInStock;
+    this.formData.description = data.description;
+  }
+  findProduct(name:any)
+  {
+    if(name === '')
+    {
+      this.handleError("Enter Product Name")
+    }
+    else{
+      this.errormessage=""
+    
+
+    this.dataservice.getproducttoupdate(name).subscribe(
+      (response)=>{
+        this.updateFormData(response);
+      },
+      (error)=>{
+        this.handleError("Product Not Found")
+      }
+    );
+    console.log(name)
     }
   }
 }
