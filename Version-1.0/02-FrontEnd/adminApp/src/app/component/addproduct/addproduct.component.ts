@@ -22,6 +22,15 @@ export class AddproductComponent {
     "category":{'name':''}
   };
 
+  formPlaceholder={
+    "name":'',
+    "description":'',
+    "unitPrice":'',
+    "imageUrl":'',
+    "active":true,
+    "unitsInStock":'',
+    "category":{'name':''}
+  }
   constructor(private dataservice:DataserviceService){}
   ngOnInit()
   {

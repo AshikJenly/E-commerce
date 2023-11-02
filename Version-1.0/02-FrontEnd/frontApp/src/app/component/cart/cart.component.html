@@ -1,6 +1,6 @@
 <body>
     <div class="container">
-        <h1>J - MART</h1>
+        <h1 class="c-title">J - MART</h1>
         <div *ngFor="let product of products; let i = index">
             <div class="cart-item">
                
@@ -21,8 +21,8 @@
             </div>
         </div>
         <div *ngIf="products?.length == 0" class="alert alert-warning" role="alert">
-            No Products Found
-            <a href="javascript:history.back()">Go Back</a>
+            <div class="c-no-product">Your Cart Is Empty</div>
+            <button class="btn btn-primary c-goback"><a href="javascript:history.back()" style="text-decoration: none; color: white;">Go Back</a> </button> 
         </div>
         <div class="cart-total card-last" *ngIf="products?.length != 0">
             <a href="javascript:history.back()" type="button" class="btn btn-primary mr-4 go-back">Go Back</a>
