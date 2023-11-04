@@ -21,13 +21,12 @@
           </div>
           <div class="product-info">
             <h2 class="card-title">{{ products[0].name }}</h2>
-            <p class="card-text"><strong>SKU:</strong> {{ products[0].sku }}</p>
-            <p class="card-text"><strong>Description:</strong> {{ products[0].description }}</p>
-            <p class="card-text"><strong>Price:</strong> {{ products[0].unitPrice | currency }}</p>
-            <p class="card-text"><strong>Active:</strong> {{ products[0].active ? 'Yes' : 'No' }}</p>
-            <p class="card-text"><strong>Units in Stock:</strong> {{ products[0].unitsInStock }}</p>
-            <p class="card-text"><strong>Date Created:</strong> {{ products[0].dateCreated | date }}</p>
-            <p class="card-text"><strong>Last Updated:</strong> {{ products[0].lastUpdated | date }}</p>
+            <p class="card-text">{{ products[0].description }}</p>
+            <p class="card-text"> {{ products[0].unitPrice | currency }}</p>
+            <p class="card-text">{{ products[0].active ? 'Product is Active' : 'Product is Not Active' }}</p>
+            <p class="card-text"> {{ products[0].unitsInStock }}</p>
+            <p class="card-text"> {{ products[0].dateCreated | date }}</p>
+            <p class="card-text"> {{ products[0].lastUpdated | date }}</p>
           </div>
         </div>
       </div>
