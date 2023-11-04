@@ -1,4 +1,4 @@
-# E-commerce Website Project README
+# E-commerce Website Project
 
 ## Table of Contents
 1. [Introduction](#introduction)
