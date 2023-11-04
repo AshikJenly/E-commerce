@@ -12,6 +12,12 @@ Welcome to the `frontapp` of our E-commerce website! This Angular application is
 
 ## Main Components
 
+## User Registration and Login
+
+- **User Registration**: To start shopping with us, new users can register for an account using the `register` component. It provides a form where users can input their personal information, including first name, last name, email, password, and whether they are a seller.
+
+- **User Login**: For returning users, the `login` component allows secure authentication. Users can log in to their accounts to access saved cart items, order history, and personalized features.
+
 ### Products
 
 The `products` component showcases a list of available products. Users can view product details, add items to their cart, and make purchase decisions based on product information and images.
