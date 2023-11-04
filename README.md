@@ -11,7 +11,7 @@
 
 ## Introduction
 
-Welcome to our e-commerce application, A simple shopping app to meet your needs. Our platform is designed to provide a seamless and convenient shopping experience for both customers and shop owners. With two dedicated frontend applications, "FrontApp" for users and "AdminApp" for shop owners, we cater to a wide range of users and offer unique features tailored to their specific needs.
+Welcome to our e-commerce application, A simple shopping app to meet your needs. Our platform is designed to provide a seamless and convenient shopping experience for both customers and shop owners. With two dedicated frontend applications, "FrontApp" for users and "AdminApp" for shop owners,The website is fully responsive which is designed for both Desktop and mobile screens. we cater to a wide range of users and offer unique features tailored to their specific needs.
 
 ### Architecture
 ![E-commerce_working](https://github.com/AshikJenly/E-commerce/assets/102305446/5a9ff279-cb29-4008-b773-75df8231a5d6)
