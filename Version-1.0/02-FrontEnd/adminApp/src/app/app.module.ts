@@ -17,6 +17,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { EditProductComponent } from './component/edit-product/edit-product.component';
 
 const routes: Routes =[
+  {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'login/:logout',component:LoginComponent},

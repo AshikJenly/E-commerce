@@ -8,7 +8,7 @@
      /* Main */
      .footer-main
      {
-         background-color: rgb(60, 65, 70);
+         background-color: #0C356A;
          /* padding-bottom: 3rem; */
          z-index: 100;
          bottom: 0%;
@@ -18,7 +18,7 @@
      /* Back to top */
      .back-to-top
      {
-         background-color: rgb(101, 104, 114);
+         background-color: #427D9D;
          height: 2.2rem;
          justify-content: center;
          color:white;
@@ -89,9 +89,9 @@
      /* Logo */
      .s-logo,
      .s-logo img{
-         width: 60%;
-         height: 10%;
-         margin-left: 20%;
+        width: 9rem;
+        height: 2rem;
+        margin-left: 15%;
          margin-right: 20%;
          margin-top: 0rem;
      }
@@ -126,7 +126,7 @@
     /* Main */
     .footer-main
     {
-        background-color: rgb(60, 65, 70);
+        background-color: #0C356A;
         /* padding-bottom: 3rem; */
         z-index: 100;
         bottom: 0%;
@@ -137,7 +137,7 @@
     /* Back to top */
     .back-to-top
     {
-        background-color: rgb(101, 104, 114);
+        background-color: #427D9D;
         height: 2.5rem;
         justify-content: center;
         color:white;
@@ -246,7 +246,7 @@
     /* Main */
     .footer-main
     {
-        background-color: rgb(60, 65, 70);
+        background-color: #0C356A;
         /* padding-bottom: 3rem; */
     position: relative;
 
@@ -255,7 +255,7 @@
     /* Back to top */
     .back-to-top
     {
-        background-color: rgb(101, 104, 114);
+        background-color: #427D9D;
         height: 2.5rem;
         justify-content: center;
         color:white;
@@ -328,7 +328,7 @@
     .s-logo,
       .s-logo img{
         width: 50%;
-        height: 10rem;
+        height: 5rem;
         margin-left: 25%;
         margin-right: 25%;
         margin-top: 0rem;
