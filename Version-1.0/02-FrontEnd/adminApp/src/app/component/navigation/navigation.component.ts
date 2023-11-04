@@ -19,7 +19,8 @@ export class NavigationComponent {
 
   ngOnInit() {
     
-    if(this.credserv.getData("isLogin") == "true")
+    const data = this.credserv.getData("isLogin") 
+    if(data == "true")
     {
       this.signInorOut = "Sign Out"
       this.signInorOutLink = "/login/logout?=''"
@@ -29,7 +30,6 @@ export class NavigationComponent {
   }
 
   doSearch(value: string) { 
-    console.log(`value=${value}`);
     this.router.navigateByUrl(`/search/${value}`);
   }
 }

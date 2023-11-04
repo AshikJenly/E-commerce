@@ -1,3 +1,26 @@
 <nav>
-    
+    <div class="nv-content">
+        <ul class="nv-list">
+            <li>
+                <div class="s-logo">
+                <img src="/assets/image/a2j.png">
+                </div>
+            </li>
+            <ul class="nv-list nv-list-c">
+                <li>
+                    <a [routerLink]="['/addproduct']">Add Product</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/editproduct']">Edit Product</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/addcategory']">Add Category</a>
+                </li>
+            </ul>
+            <li>
+                <a routerLink="{{ signInorOutLink }}" class="btn btn-warning">{{ signInorOut }}</a>
+            </li>
+            
+        </ul>
+    </div>
 </nav>

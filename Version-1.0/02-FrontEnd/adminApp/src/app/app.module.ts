@@ -24,7 +24,7 @@ const routes: Routes =[
   {path:'register',component:RegisterComponent},
   {path:'addproduct',component:AddproductComponent,canActivate:[AuthGuard]},
   {path:'addcategory',component:AddcategoryComponent,canActivate:[AuthGuard]},
-  {path:'editproduct',component:EditProductComponent}
+  {path:'editproduct',component:EditProductComponent,canActivate:[AuthGuard]}
 ]
 
 @NgModule({
