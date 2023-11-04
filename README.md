@@ -13,6 +13,10 @@
 
 Welcome to our e-commerce application, A simple shopping app to meet your needs. Our platform is designed to provide a seamless and convenient shopping experience for both customers and shop owners. With two dedicated frontend applications, "FrontApp" for users and "AdminApp" for shop owners, we cater to a wide range of users and offer unique features tailored to their specific needs.
 
+### Architecture
+![E-commerce_working](https://github.com/AshikJenly/E-commerce/assets/102305446/5a9ff279-cb29-4008-b773-75df8231a5d6)
+
+
 ### FrontApp: 
 
 FrontApp is the user interface app that empowers customers to explore our vast collection of products, register for an account, and enjoy a hassle-free shopping journey.
@@ -126,63 +130,8 @@ Follow these steps to set up and run the Angular app on your local development e
 
 The e-commerce platform is powered by a relational database that stores crucial information about customers, shop owners, products, and more. Below is an overview of the database schema.
 
-## Tables
+![E-commerce_database](https://github.com/AshikJenly/E-commerce/assets/102305446/b687c416-2603-41d6-99b2-1dc2b65720f7)
 
-The database consists of the following tables:
-
-- `adminuser`: Stores information about shop owners or administrators.
-- `customer`: Contains data related to customers who use the platform.
-- `in_cart`: Records products added to customers' shopping carts.
-- `product`: Stores details about the available products for sale.
-- `product_category`: Lists product categories to classify products.
-
-## Table Details
-
-### `adminuser`
-
-- `aid`: Unique identifier for each shop owner.
-- `firstname`: First name of the shop owner.
-- `lastname`: Last name of the shop owner.
-- `email`: Unique email address (must be unique).
-- `password`: Password for authentication.
-- `shopname`: Shop name.
-- `pannumber`: PAN (Permanent Account Number) of the shop owner.
-- `aadhar`: Aadhar card number.
-
-### `customer`
-
-- `cid`: Unique identifier for each customer.
-- `firstname`: First name of the customer.
-- `lastname`: Last name of the customer.
-- `email`: Unique email address (must be unique).
-- `password`: Password for authentication.
-- `is_seller`: Indicates if the customer is also a shop owner (1 for yes, 0 for no).
-
-### `in_cart`
-
-- `id`: Unique identifier for each entry in the shopping cart.
-- `cid`: Identifier of the customer.
-- `sku`: Stock Keeping Unit (SKU) of the product.
-- `count`: Quantity of the product in the cart.
-
-### `product`
-
-- `id`: Unique identifier for each product.
-- `sku`: Stock Keeping Unit (SKU) of the product.
-- `name`: Product name.
-- `description`: Product description.
-- `unit_price`: Unit price of the product.
-- `image_url`: URL to the product image.
-- `active`: Indicates if the product is currently available (1 for yes, 0 for no).
-- `units_in_stock`: Quantity of the product in stock.
-- `date_created`: Timestamp of when the product was added.
-- `last_updated`: Timestamp of the last update.
-- `category_id`: Foreign key referencing the product category.
-
-### `product_category`
-
-- `id`: Unique identifier for each product category.
-- `name`: Name of the product category.
 
 ## Licensing
 Specify the project's license and any terms and conditions for usage. Clarify permissions and restrictions for potential users.

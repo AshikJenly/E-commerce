@@ -91,4 +91,64 @@ The `ProductCategoryRepository` manages interactions with the `product_category`
 
 The backend interacts with a relational database to store and retrieve data related to customers, shop owners, products, and product categories. This interaction is managed through the Data Access Object (DAO) classes, which handle the database operations.
 
+## Database Schema
+The structure and Design of the database which is used to store the data and retrieve.
+## Tables
+
+The database consists of the following tables:
+
+- `adminuser`: Stores information about shop owners or administrators.
+- `customer`: Contains data related to customers who use the platform.
+- `in_cart`: Records products added to customers' shopping carts.
+- `product`: Stores details about the available products for sale.
+- `product_category`: Lists product categories to classify products.
+
+## Table Details
+
+### `adminuser`
+
+- `aid`: Unique identifier for each shop owner.
+- `firstname`: First name of the shop owner.
+- `lastname`: Last name of the shop owner.
+- `email`: Unique email address (must be unique).
+- `password`: Password for authentication.
+- `shopname`: Shop name.
+- `pannumber`: PAN (Permanent Account Number) of the shop owner.
+- `aadhar`: Aadhar card number.
+
+### `customer`
+
+- `cid`: Unique identifier for each customer.
+- `firstname`: First name of the customer.
+- `lastname`: Last name of the customer.
+- `email`: Unique email address (must be unique).
+- `password`: Password for authentication.
+- `is_seller`: Indicates if the customer is also a shop owner (1 for yes, 0 for no).
+
+### `in_cart`
+
+- `id`: Unique identifier for each entry in the shopping cart.
+- `cid`: Identifier of the customer.
+- `sku`: Stock Keeping Unit (SKU) of the product.
+- `count`: Quantity of the product in the cart.
+
+### `product`
+
+- `id`: Unique identifier for each product.
+- `sku`: Stock Keeping Unit (SKU) of the product.
+- `name`: Product name.
+- `description`: Product description.
+- `unit_price`: Unit price of the product.
+- `image_url`: URL to the product image.
+- `active`: Indicates if the product is currently available (1 for yes, 0 for no).
+- `units_in_stock`: Quantity of the product in stock.
+- `date_created`: Timestamp of when the product was added.
+- `last_updated`: Timestamp of the last update.
+- `category_id`: Foreign key referencing the product category.
+
+### `product_category`
+
+- `id`: Unique identifier for each product category.
+- `name`: Name of the product category.
+
 This detailed explanation provides insight into the various functionalities offered by the backend of the e-commerce website. You can expand on this information to include specific details about API endpoints, data flows, and additional features as needed.
