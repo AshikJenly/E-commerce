@@ -23,8 +23,8 @@
 .ah-card:hover {
     transform: scale(1.05); 
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); 
-    background-color: #3498db; 
-    border: 1px solid #2980b9; 
+    /* background-color: #427D9D;  */
+    border: 1px solid ; 
 }
 
 
@@ -52,14 +52,14 @@
     border: 1px solid black;
     border-radius: 5px; 
     background-color: #fff; 
-    color: cadetblue; 
+    color: #0C356A; 
     cursor: pointer;
     transition: background-color 0.3s;
     margin: 2rem;
 }
 
 .ah-button:hover {
-    background-color: cadetblue;
+    background-color: #0C356A;
     color: #fff;
 }
 

@@ -8,7 +8,7 @@
      /* Main */
      .footer-main
      {
-         background-color: rgb(60, 65, 70);
+         background-color:#0C356A;
          /* padding-bottom: 3rem; */
          z-index: 100;
          bottom: 0%;
@@ -18,7 +18,7 @@
      /* Back to top */
      .back-to-top
      {
-         background-color: rgb(101, 104, 114);
+         background-color: #427D9D;
          height: 2.2rem;
          justify-content: center;
          color:white;
@@ -126,7 +126,7 @@
     /* Main */
     .footer-main
     {
-        background-color: rgb(60, 65, 70);
+        background-color:#0C356A;
         /* padding-bottom: 3rem; */
         z-index: 100;
         bottom: 0%;
@@ -137,7 +137,7 @@
     /* Back to top */
     .back-to-top
     {
-        background-color: rgb(101, 104, 114);
+        background-color: #427D9D;
         height: 2.5rem;
         justify-content: center;
         color:white;
@@ -246,7 +246,7 @@
     /* Main */
     .footer-main
     {
-        background-color: rgb(60, 65, 70);
+        background-color:#0C356A;
         /* padding-bottom: 3rem; */
     position: relative;
 
@@ -255,7 +255,7 @@
     /* Back to top */
     .back-to-top
     {
-        background-color: rgb(101, 104, 114);
+        background-color: #427D9D;
         height: 2.5rem;
         justify-content: center;
         color:white;
