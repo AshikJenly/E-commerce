@@ -66,18 +66,24 @@ Welcome to the `adminapp` of our E-commerce website! This Angular application is
 
 ## Main Components
 
-### Home
+### User Registration
 
-The `home` component is the main dashboard for admin users. It may display an overview of shop statistics, important notifications, or other relevant information for shop owners.
+- **Admin Registration**: New administrators and shop owners can register for an account using the `register` component. The registration form collects essential information, including:
+  - First name
+  - Last name
+  - Email (must be unique)
+  - Password for authentication
+  - Shop name
+  - PAN (Permanent Account Number)
+  - Aadhar card number
 
-### Register
+  Once registered, administrators gain access to the admin dashboard, where they can manage their shops and products effectively.
 
-The `register` component allows new admin users to register for an account. It provides a form for users to input their information and create an admin account.
+### User Login
 
+- **Admin Login**: Returning administrators and shop owners can log in using the `login` component. This secure authentication process allows them to access their admin dashboard to add or update their products
 
-### Login
-
-The `login` component is where admin users can log in to access the admin features. It provides a secure authentication process for authorized access.
+  Logging in also provides access to features such as tracking sales, viewing customer information, and handling shop-related tasks.
 
 ### Add Product
 
