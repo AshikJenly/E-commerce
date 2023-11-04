@@ -6,3 +6,24 @@ nav{
     z-index: 100;
     background-color: rgb(166, 175, 183);
 }
+
+.nv-list
+{
+    display: flex;
+    justify-content: space-between;
+}
+.nv-list li{
+    list-style: none;
+    text-decoration: none;
+}
+.s-logo img{
+    position: relative;
+    height: 3rem;
+    width: 8.5rem;
+  }
+.nv-list-c{
+    width: 30%;
+    margin-right: 2%;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+}
