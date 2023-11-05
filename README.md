@@ -126,13 +126,44 @@ Follow these steps to set up and run the Angular app on your local development e
 
 ## Usage
 
+Our E-commerce project offers a wide range of features for both customers and administrators. Here's how you can make the most of the platform:
+
+- **User Registration**: New customers can register for an account, while administrators can register as shop owners. Registration is essential for accessing all the features of the platform.
+
+- **Customer Shopping**: After registration, customers can browse products, add them to their cart, and proceed to checkout for a seamless shopping experience.
+
+- **Admin Shop Management**: Shop owners can register their shops, add products, and manage their inventory efficiently. The admin dashboard provides tools for effective shop management.
+
+- **Product Updates**: Admins can update product details, including product names, descriptions, prices, and availability. Ensure your products are up-to-date and accurately presented.
+
+- **Payment and Checkout**: After adding products to the cart, customers can proceed to the checkout page to finalize their purchases. Payment options are available to complete the transaction.
+
 ## Database Schema
 
 The e-commerce platform is powered by a relational database that stores crucial information about customers, shop owners, products, and more. Below is an overview of the database schema.
 
 ![E-commerce_database](https://github.com/AshikJenly/E-commerce/assets/102305446/b687c416-2603-41d6-99b2-1dc2b65720f7)
 
+## Updates Required for Full Functionality
+
+While our E-commerce platform offers a range of features, there are certain updates and improvements that can enhance its functionality and user experience. Here are some areas that may need attention:
+
+- **Enhanced User Profiles**: Consider adding profile customization options for customers and administrators to personalize their accounts.
+
+- **Product Reviews and Ratings**: Implement a system for customers to leave reviews and ratings for products, enhancing trust and product selection.
+
+- **Security Enhancements**: Strengthen security measures, including user data protection, payment processing security, and secure authentication.
+ 
+- **Transaction Facility (Under Development)**: Our E-commerce platform is currently working on implementing a secure and efficient transaction facility that will enable users to complete purchases and payments seamlessly. This feature is under active development, and we aim to provide a safe and reliable payment system for a hassle-free shopping experience.
+
 
 ## Licensing
-Specify the project's license and any terms and conditions for usage. Clarify permissions and restrictions for potential users.
+
+This E-commerce website is open source and is provided under the [MIT License](https://opensource.org/licenses/MIT). This license grants users the following permissions:
+
+- Users are free to use, modify, and distribute the software for both personal and commercial purposes.
+
+- Attribution is not required, although it's appreciated.
+
+- Contributions from the community are welcome and fall under the MIT License.
 
