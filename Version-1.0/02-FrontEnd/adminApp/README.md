@@ -6,21 +6,25 @@ Welcome to the Admin App of our E-commerce platform. This section provides an ov
 
 ### Admin Home Page
 
-![admin-home](https://github.com/AshikJenly/E-commerce/assets/102305446/de53ec67-95cb-4283-abf2-e9343070ee12)
+![admin-home](https://github.com/AshikJenly/E-commerce/assets/102305446/467adedb-7f5f-46d7-96ca-ddb933b47a23)
+
 
 ### Admin Home Page (Mobile View)
 
-![admin-home-mobile](https://github.com/AshikJenly/E-commerce/assets/102305446/20d35198-2b92-48bf-8c6a-1725c7f6f1ef)
+![admin-home-mobile](https://github.com/AshikJenly/E-commerce/assets/102305446/72531260-2074-46fe-bdfd-df24a509d1d0)
+
 
 
 ### Add Product Page
+![admin-add-product](https://github.com/AshikJenly/E-commerce/assets/102305446/88f9e6c8-b339-41ab-b847-addc2658c80a)
 
-![admin-add-product](https://github.com/AshikJenly/E-commerce/assets/102305446/450539f3-10ee-4cc5-8d99-e710d3fec850)
 
 ### Edit Product Page
 
-![admin-edit-prod](https://github.com/AshikJenly/E-commerce/assets/102305446/bbb86b64-6769-4356-8c3f-5532271feb15)
+![admin-edit-prod](https://github.com/AshikJenly/E-commerce/assets/102305446/c504b32b-8037-4aca-81bc-cf7d48e4cc1a)
+
 
 ### Edit Product Page (Mobile View)
 
-![admin-edit-prod-mobile](https://github.com/AshikJenly/E-commerce/assets/102305446/f9287fb3-bfa8-4731-bf8d-6e7bbd5aa55d)
+![admin-edit-prod-mobile](https://github.com/AshikJenly/E-commerce/assets/102305446/063499d5-8690-4858-9c83-443390011b78)
+
