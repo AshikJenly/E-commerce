@@ -1,27 +1,26 @@
-# AdminApp
+# Admin App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Welcome to the Admin App of our E-commerce platform. This section provides an overview of the admin features and functionalities.
 
-## Development server
+## Screenshots
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Admin Home Page
 
-## Code scaffolding
+![admin-home](https://github.com/AshikJenly/E-commerce/assets/102305446/de53ec67-95cb-4283-abf2-e9343070ee12)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Admin Home Page (Mobile View)
 
-## Build
+![admin-home-mobile](https://github.com/AshikJenly/E-commerce/assets/102305446/20d35198-2b92-48bf-8c6a-1725c7f6f1ef)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+### Add Product Page
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![admin-add-product](https://github.com/AshikJenly/E-commerce/assets/102305446/450539f3-10ee-4cc5-8d99-e710d3fec850)
 
-## Running end-to-end tests
+### Edit Product Page
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![admin-edit-prod](https://github.com/AshikJenly/E-commerce/assets/102305446/bbb86b64-6769-4356-8c3f-5532271feb15)
 
-## Further help
+### Edit Product Page (Mobile View)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![admin-edit-prod-mobile](https://github.com/AshikJenly/E-commerce/assets/102305446/f9287fb3-bfa8-4731-bf8d-6e7bbd5aa55d)
