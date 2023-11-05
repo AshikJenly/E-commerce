@@ -1,27 +1,39 @@
-# FrontApp
+#FrontApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Welcome to the E-commerce FrontApp! This is the user interface for our online shopping platform.Our website is thoughtfully designed and optimized to provide a seamless shopping experience on both desktop and mobile devices.
 
-## Development server
+## Screenshots
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Front Page
+![frontpage](https://github.com/AshikJenly/E-commerce/assets/102305446/238708af-fb40-4616-82b2-a54506e3e270)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The front page displays a wide range of products from different categories.
 
-## Build
+### Checkout Page
+![checkout_mobile](https://github.com/AshikJenly/E-commerce/assets/102305446/8a28fae2-7e8f-40d2-94c7-9a470fc86fc1)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+The checkout page allows users to review and confirm their orders.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Payment Page
 
-## Running end-to-end tests
+![payment_page](https://github.com/AshikJenly/E-commerce/assets/102305446/8c6445da-bcc4-4119-8df7-4c143b1bb91b)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+On the payment page, users can choose their preferred payment method and complete the transaction.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Mobile View
+![frontpage_mobile](https://github.com/AshikJenly/E-commerce/assets/102305446/c78c741d-c56b-43b0-973d-dfee68ff1669)
+
+The front page is designed to be responsive and accessible on mobile devices.
+
+![payment_mobile](https://github.com/AshikJenly/E-commerce/assets/102305446/1b5056dd-0a86-4b06-a83f-e803d1544df5)
+
+The payment page is optimized for mobile users as well.
+
+### Product Details
+
+![view_prod](https://github.com/AshikJenly/E-commerce/assets/102305446/27002e77-9f56-465b-9771-f10682773e89)
+
+Users can click on a product to view detailed information and make a purchase decision.
