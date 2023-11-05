@@ -14,7 +14,8 @@
 Welcome to our e-commerce application, A simple shopping app to meet your needs. Our platform is designed to provide a seamless and convenient shopping experience for both customers and shop owners. With two dedicated frontend applications, "FrontApp" for users and "AdminApp" for shop owners,The website is fully responsive which is designed for both Desktop and mobile screens. we cater to a wide range of users and offer unique features tailored to their specific needs.
 
 ### Architecture
-![E-commerce_working](https://github.com/AshikJenly/E-commerce/assets/102305446/5a9ff279-cb29-4008-b773-75df8231a5d6)
+![E-commerce_working](https://github.com/AshikJenly/E-commerce/assets/102305446/0c16bc6c-e126-4b9e-b5a2-e24ec74f4a34)
+
 
 
 ### FrontApp: 
@@ -142,7 +143,7 @@ Our E-commerce project offers a wide range of features for both customers and ad
 
 The e-commerce platform is powered by a relational database that stores crucial information about customers, shop owners, products, and more. Below is an overview of the database schema.
 
-![E-commerce_database](https://github.com/AshikJenly/E-commerce/assets/102305446/b687c416-2603-41d6-99b2-1dc2b65720f7)
+![E-commerce_database](https://github.com/AshikJenly/E-commerce/assets/102305446/fb9c42b5-d380-4081-80f3-51bc905c5944)
 
 ## Updates Required for Full Functionality
 
