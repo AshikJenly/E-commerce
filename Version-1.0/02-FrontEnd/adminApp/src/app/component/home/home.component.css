@@ -69,6 +69,7 @@
         width: 100%;
     }
     .ah-content{
+        margin-top: 17%;
         flex-direction: column;
     }
 
